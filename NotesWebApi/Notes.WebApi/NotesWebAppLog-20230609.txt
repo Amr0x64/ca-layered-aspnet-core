@@ -1,0 +1,1003 @@
+2023-06-09 13:23:35.893 +03:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2023-06-09 13:23:36.137 +03:00 [INF] User profile is available. Using 'C:\Users\Honor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-06-09 13:23:36.448 +03:00 [INF] Now listening on: https://localhost:7124
+2023-06-09 13:23:36.449 +03:00 [INF] Now listening on: http://localhost:5124
+2023-06-09 13:23:36.451 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-06-09 13:23:36.452 +03:00 [INF] Hosting environment: Development
+2023-06-09 13:23:36.453 +03:00 [INF] Content root path: C:\Users\Honor\source\repos\Notes\NotesWebApi\Notes.WebApi\
+2023-06-09 13:34:54.211 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7124/api/1.0/Note - -
+2023-06-09 13:34:54.271 +03:00 [INF] CORS policy execution successful.
+2023-06-09 13:34:54.281 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7124/api/1.0/Note - - - 204 - - 72.4864ms
+2023-06-09 13:34:54.282 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/api/1.0/Note - -
+2023-06-09 13:34:54.310 +03:00 [INF] CORS policy execution successful.
+2023-06-09 13:34:54.682 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-06-09 13:34:54.714 +03:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNoteList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2023-06-09 13:34:54.869 +03:00 [INF] Notes Request: GetNoteListQuery "cb40d4d0-c90f-458e-b1ef-43db969210b4" {"UserId":"cb40d4d0-c90f-458e-b1ef-43db969210b4","$type":"GetNoteListQuery"}
+2023-06-09 13:34:55.162 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@__ToLower_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "n"."NoteId", "n"."Title"
+FROM "Notes" AS "n"
+WHERE lower(CAST("n"."UserId" AS TEXT)) = @__ToLower_0
+2023-06-09 13:34:55.176 +03:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Application.Notes.Queries.GetNoteList.NoteListVm'.
+2023-06-09 13:34:55.256 +03:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi) in 536.5692ms
+2023-06-09 13:34:55.257 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-06-09 13:34:55.263 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/api/1.0/Note - - - 200 - application/json;+charset=utf-8 980.5556ms
+2023-06-09 13:34:55.266 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/api/1.0/Note - -
+2023-06-09 13:34:55.270 +03:00 [INF] CORS policy execution successful.
+2023-06-09 13:34:55.273 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-06-09 13:34:55.275 +03:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNoteList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2023-06-09 13:34:55.279 +03:00 [INF] Notes Request: GetNoteListQuery "cb40d4d0-c90f-458e-b1ef-43db969210b4" {"UserId":"cb40d4d0-c90f-458e-b1ef-43db969210b4","$type":"GetNoteListQuery"}
+2023-06-09 13:34:55.353 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__ToLower_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "n"."NoteId", "n"."Title"
+FROM "Notes" AS "n"
+WHERE lower(CAST("n"."UserId" AS TEXT)) = @__ToLower_0
+2023-06-09 13:34:55.358 +03:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Application.Notes.Queries.GetNoteList.NoteListVm'.
+2023-06-09 13:34:55.359 +03:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi) in 81.0337ms
+2023-06-09 13:34:55.360 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-06-09 13:34:55.363 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/api/1.0/Note - - - 200 - application/json;+charset=utf-8 96.4990ms
+2023-06-09 14:04:42.795 +03:00 [INF] Executed DbCommand (30ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2023-06-09 14:04:43.178 +03:00 [INF] User profile is available. Using 'C:\Users\Honor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-06-09 14:04:43.395 +03:00 [INF] Now listening on: https://localhost:7124
+2023-06-09 14:04:43.397 +03:00 [INF] Now listening on: http://localhost:5124
+2023-06-09 14:04:43.399 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-06-09 14:04:43.401 +03:00 [INF] Hosting environment: Development
+2023-06-09 14:04:43.402 +03:00 [INF] Content root path: C:\Users\Honor\source\repos\Notes\NotesWebApi\Notes.WebApi\
+2023-06-09 14:05:45.024 +03:00 [INF] Executed DbCommand (23ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2023-06-09 14:05:45.243 +03:00 [INF] User profile is available. Using 'C:\Users\Honor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-06-09 14:05:45.378 +03:00 [INF] Now listening on: https://localhost:7124
+2023-06-09 14:05:45.380 +03:00 [INF] Now listening on: http://localhost:5124
+2023-06-09 14:05:45.382 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-06-09 14:05:45.383 +03:00 [INF] Hosting environment: Development
+2023-06-09 14:05:45.384 +03:00 [INF] Content root path: C:\Users\Honor\source\repos\Notes\NotesWebApi\Notes.WebApi\
+2023-06-09 14:06:21.009 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/index.html - -
+2023-06-09 14:06:21.437 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/index.html - - - 200 - text/html;charset=utf-8 430.4154ms
+2023-06-09 14:06:21.543 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/swagger-ui-bundle.js - -
+2023-06-09 14:06:21.547 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/swagger-ui-standalone-preset.js - -
+2023-06-09 14:06:21.547 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/_vs/browserLink - -
+2023-06-09 14:06:21.548 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/_framework/aspnetcore-browser-refresh.js - -
+2023-06-09 14:06:21.559 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/_framework/aspnetcore-browser-refresh.js - - - 200 11994 application/javascript;+charset=utf-8 11.7404ms
+2023-06-09 14:06:21.577 +03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2023-06-09 14:06:21.581 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/swagger-ui-standalone-preset.js - - - 200 312163 application/javascript 33.7711ms
+2023-06-09 14:06:21.587 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 39.7592ms
+2023-06-09 14:06:21.593 +03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2023-06-09 14:06:21.594 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/swagger-ui-bundle.js - - - 200 1061536 application/javascript 51.6518ms
+2023-06-09 14:06:21.940 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/favicon-32x32.png - -
+2023-06-09 14:06:21.942 +03:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2023-06-09 14:06:21.943 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/favicon-32x32.png - - - 200 628 image/png 3.6497ms
+2023-06-09 14:06:22.091 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/swagger/v1/swagger.json - -
+2023-06-09 14:06:22.315 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 223.7723ms
+2023-06-09 14:06:25.860 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7124/api/1.0/Note - -
+2023-06-09 14:06:25.894 +03:00 [INF] CORS policy execution successful.
+2023-06-09 14:06:25.897 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7124/api/1.0/Note - - - 204 - - 37.6786ms
+2023-06-09 14:06:25.901 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/api/1.0/Note - -
+2023-06-09 14:06:25.910 +03:00 [INF] CORS policy execution successful.
+2023-06-09 14:06:26.460 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-06-09 14:06:26.503 +03:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNoteList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2023-06-09 14:06:26.758 +03:00 [INF] Notes Request: GetNoteListQuery "cb40d4d0-c90f-458e-b1ef-43db969210b4" {"UserId":"cb40d4d0-c90f-458e-b1ef-43db969210b4","$type":"GetNoteListQuery"}
+2023-06-09 14:06:27.184 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__ToLower_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "n"."NoteId", "n"."Title"
+FROM "Notes" AS "n"
+WHERE lower(CAST("n"."UserId" AS TEXT)) = @__ToLower_0
+2023-06-09 14:06:27.202 +03:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Application.Notes.Queries.GetNoteList.NoteListVm'.
+2023-06-09 14:06:27.228 +03:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi) in 717.7582ms
+2023-06-09 14:06:27.230 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-06-09 14:06:27.235 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/api/1.0/Note - -
+2023-06-09 14:06:27.235 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/api/1.0/Note - - - 200 - application/json;+charset=utf-8 1334.6204ms
+2023-06-09 14:06:27.238 +03:00 [INF] CORS policy execution successful.
+2023-06-09 14:06:27.245 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-06-09 14:06:27.248 +03:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNoteList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2023-06-09 14:06:27.254 +03:00 [INF] Notes Request: GetNoteListQuery "cb40d4d0-c90f-458e-b1ef-43db969210b4" {"UserId":"cb40d4d0-c90f-458e-b1ef-43db969210b4","$type":"GetNoteListQuery"}
+2023-06-09 14:06:27.346 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__ToLower_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "n"."NoteId", "n"."Title"
+FROM "Notes" AS "n"
+WHERE lower(CAST("n"."UserId" AS TEXT)) = @__ToLower_0
+2023-06-09 14:06:27.352 +03:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Application.Notes.Queries.GetNoteList.NoteListVm'.
+2023-06-09 14:06:27.353 +03:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi) in 101.0497ms
+2023-06-09 14:06:27.355 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-06-09 14:06:27.358 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/api/1.0/Note - - - 200 - application/json;+charset=utf-8 122.7628ms
+2023-06-09 14:06:48.101 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/api/1/Note - -
+2023-06-09 14:06:48.105 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-06-09 14:06:48.106 +03:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNoteList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2023-06-09 14:06:48.112 +03:00 [INF] Notes Request: GetNoteListQuery "cb40d4d0-c90f-458e-b1ef-43db969210b4" {"UserId":"cb40d4d0-c90f-458e-b1ef-43db969210b4","$type":"GetNoteListQuery"}
+2023-06-09 14:06:48.125 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__ToLower_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "n"."NoteId", "n"."Title"
+FROM "Notes" AS "n"
+WHERE lower(CAST("n"."UserId" AS TEXT)) = @__ToLower_0
+2023-06-09 14:06:48.130 +03:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Application.Notes.Queries.GetNoteList.NoteListVm'.
+2023-06-09 14:06:48.131 +03:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi) in 22.3686ms
+2023-06-09 14:06:48.132 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-06-09 14:06:48.134 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/api/1/Note - - - 200 - application/json;+charset=utf-8 32.7112ms
+2023-06-09 14:07:58.829 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/api/1/Room - -
+2023-06-09 14:07:58.831 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.RoomController.GetAll (Notes.WebApi)'
+2023-06-09 14:07:58.836 +03:00 [INF] Route matched with {action = "GetAll", controller = "Room"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Rooms.Queries.GetRoomList.RoomListVm]] GetAll() on controller Notes.WebApi.Controllers.RoomController (Notes.WebApi).
+2023-06-09 14:07:58.840 +03:00 [INF] Notes Request: GetRoomListQuery "cb40d4d0-c90f-458e-b1ef-43db969210b4" {"UserId":"cb40d4d0-c90f-458e-b1ef-43db969210b4","$type":"GetRoomListQuery"}
+2023-06-09 14:07:58.852 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__request_UserId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "r"."RoomId", "r"."Title"
+FROM "Rooms" AS "r"
+WHERE "r"."UserId" = @__request_UserId_0 AND "r"."IsActive"
+2023-06-09 14:07:58.856 +03:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Application.Rooms.Queries.GetRoomList.RoomListVm'.
+2023-06-09 14:07:58.863 +03:00 [INF] Executed action Notes.WebApi.Controllers.RoomController.GetAll (Notes.WebApi) in 24.9254ms
+2023-06-09 14:07:58.864 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.RoomController.GetAll (Notes.WebApi)'
+2023-06-09 14:07:58.865 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/api/1/Room - - - 200 - application/json;+charset=utf-8 36.5216ms
+2023-06-09 14:08:20.390 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/api/1/Section/27540d06-1224-4dd7-a1cb-38f64c590160 - -
+2023-06-09 14:08:20.393 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.SectionController.GetAll (Notes.WebApi)'
+2023-06-09 14:08:20.414 +03:00 [INF] Route matched with {action = "GetAll", controller = "Section"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Sections.Queries.GetSectionDetails.SectionListVm]] GetAll(System.Guid) on controller Notes.WebApi.Controllers.SectionController (Notes.WebApi).
+2023-06-09 14:08:20.434 +03:00 [INF] Notes Request: GetSectionListQuery "cb40d4d0-c90f-458e-b1ef-43db969210b4" {"RoomId":"27540d06-1224-4dd7-a1cb-38f64c590160","$type":"GetSectionListQuery"}
+2023-06-09 14:08:20.549 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__request_RoomId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."SectionId", "s"."CreationDate", "s"."Details", "s"."IsActive", "s"."RoomId", "s"."Title", "n"."NoteId", "n"."CreationDate", "n"."Details", "n"."EditDate", "n"."ParentNoteId", "n"."SectionId", "n"."Title", "n"."UserId"
+FROM "Sections" AS "s"
+LEFT JOIN "Notes" AS "n" ON "s"."SectionId" = "n"."SectionId"
+WHERE "s"."IsActive" AND "s"."RoomId" = @__request_RoomId_0
+ORDER BY "s"."SectionId"
+2023-06-09 14:08:20.639 +03:00 [INF] Executing ObjectResult, writing value of type 'Notes.Application.Sections.Queries.GetSectionDetails.SectionListVm'.
+2023-06-09 14:08:20.666 +03:00 [INF] Executed action Notes.WebApi.Controllers.SectionController.GetAll (Notes.WebApi) in 245.9187ms
+2023-06-09 14:08:20.669 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.SectionController.GetAll (Notes.WebApi)'
+2023-06-09 14:08:20.670 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/api/1/Section/27540d06-1224-4dd7-a1cb-38f64c590160 - - - 200 - application/json;+charset=utf-8 279.9183ms
+2023-06-09 14:09:23.161 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7124/api/1/Note application/json 126
+2023-06-09 14:09:23.163 +03:00 [INF] CORS policy execution successful.
+2023-06-09 14:09:23.166 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.Create (Notes.WebApi)'
+2023-06-09 14:09:23.172 +03:00 [INF] Route matched with {action = "Create", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid]] Create(Notes.WebApi.Models.CreateNoteDto) on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2023-06-09 14:09:23.213 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-06-09 14:09:23.222 +03:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.Create (Notes.WebApi) in 47.047ms
+2023-06-09 14:09:23.223 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.Create (Notes.WebApi)'
+2023-06-09 14:09:23.225 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7124/api/1/Note application/json 126 - 400 - application/json;+charset=utf-8 63.2336ms
+2023-06-09 14:21:35.334 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7124/api/1/Note application/json 128
+2023-06-09 14:21:35.336 +03:00 [INF] CORS policy execution successful.
+2023-06-09 14:21:35.337 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.Create (Notes.WebApi)'
+2023-06-09 14:21:35.338 +03:00 [INF] Route matched with {action = "Create", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid]] Create(Notes.WebApi.Models.CreateNoteDto) on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2023-06-09 14:21:35.391 +03:00 [INF] Notes Request: CreateNoteCommand "cb40d4d0-c90f-458e-b1ef-43db969210b4" {"UserId":"cb40d4d0-c90f-458e-b1ef-43db969210b4","Title":"firstNote","Details":"string","ParentNoteId":"00000000-0000-0000-0000-000000000000","SectionId":"28e7cf86-8368-4219-87ea-99f04904de8a","$type":"CreateNoteCommand"}
+2023-06-09 14:21:35.574 +03:00 [ERR] Failed executing DbCommand (5ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime), @p2='?' (Size = 6), @p3='?' (DbType = DateTime), @p4='?' (DbType = Guid), @p5='?' (DbType = Guid), @p6='?' (Size = 9), @p7='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Notes" ("NoteId", "CreationDate", "Details", "EditDate", "ParentNoteId", "SectionId", "Title", "UserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+2023-06-09 14:21:35.637 +03:00 [ERR] An exception occurred in the database while saving changes for context type 'Notes.Persistence.NotesDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 19: 'FOREIGN KEY constraint failed'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 19: 'FOREIGN KEY constraint failed'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2023-06-09 14:21:35.664 +03:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.Create (Notes.WebApi) in 324.7538ms
+2023-06-09 14:21:35.666 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.Create (Notes.WebApi)'
+2023-06-09 14:21:35.674 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7124/api/1/Note application/json 128 - 500 - application/json 340.1385ms
+2023-06-09 14:21:43.142 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7124/api/1/Note application/json 130
+2023-06-09 14:21:43.144 +03:00 [INF] CORS policy execution successful.
+2023-06-09 14:21:43.146 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.Create (Notes.WebApi)'
+2023-06-09 14:21:43.148 +03:00 [INF] Route matched with {action = "Create", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid]] Create(Notes.WebApi.Models.CreateNoteDto) on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2023-06-09 14:21:43.153 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-06-09 14:21:43.154 +03:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.Create (Notes.WebApi) in 1.675ms
+2023-06-09 14:21:43.155 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.Create (Notes.WebApi)'
+2023-06-09 14:21:43.156 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7124/api/1/Note application/json 130 - 400 - application/json;+charset=utf-8 13.7695ms
+2023-06-09 14:21:51.028 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7124/api/1/Note application/json 129
+2023-06-09 14:21:51.029 +03:00 [INF] CORS policy execution successful.
+2023-06-09 14:21:51.033 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.Create (Notes.WebApi)'
+2023-06-09 14:21:51.034 +03:00 [INF] Route matched with {action = "Create", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid]] Create(Notes.WebApi.Models.CreateNoteDto) on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2023-06-09 14:21:51.036 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-06-09 14:21:51.039 +03:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.Create (Notes.WebApi) in 2.9602ms
+2023-06-09 14:21:51.043 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.Create (Notes.WebApi)'
+2023-06-09 14:21:51.044 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7124/api/1/Note application/json 129 - 400 - application/json;+charset=utf-8 16.4306ms
+2023-06-09 14:31:15.889 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7124/api/1/Note application/json 107
+2023-06-09 14:31:15.890 +03:00 [INF] CORS policy execution successful.
+2023-06-09 14:31:15.892 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.Create (Notes.WebApi)'
+2023-06-09 14:31:15.893 +03:00 [INF] Route matched with {action = "Create", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid]] Create(Notes.WebApi.Models.CreateNoteDto) on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2023-06-09 14:31:15.895 +03:00 [INF] Notes Request: CreateNoteCommand "cb40d4d0-c90f-458e-b1ef-43db969210b4" {"UserId":"cb40d4d0-c90f-458e-b1ef-43db969210b4","Title":"firstNote","Details":"string","ParentNoteId":"00000000-0000-0000-0000-000000000000","SectionId":"28e7cf86-8368-4219-87ea-99f04904de8a","$type":"CreateNoteCommand"}
+2023-06-09 14:31:15.906 +03:00 [ERR] Failed executing DbCommand (5ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime), @p2='?' (Size = 6), @p3='?' (DbType = DateTime), @p4='?' (DbType = Guid), @p5='?' (DbType = Guid), @p6='?' (Size = 9), @p7='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Notes" ("NoteId", "CreationDate", "Details", "EditDate", "ParentNoteId", "SectionId", "Title", "UserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+2023-06-09 14:31:15.910 +03:00 [ERR] An exception occurred in the database while saving changes for context type 'Notes.Persistence.NotesDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 19: 'FOREIGN KEY constraint failed'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 19: 'FOREIGN KEY constraint failed'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2023-06-09 14:31:15.928 +03:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.Create (Notes.WebApi) in 33.4949ms
+2023-06-09 14:31:15.931 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.Create (Notes.WebApi)'
+2023-06-09 14:31:15.932 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7124/api/1/Note application/json 107 - 500 - application/json 43.4856ms
+2023-06-09 14:51:32.939 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7124/api/1/Note application/json 126
+2023-06-09 14:51:32.941 +03:00 [INF] CORS policy execution successful.
+2023-06-09 14:51:32.944 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.Create (Notes.WebApi)'
+2023-06-09 14:51:32.945 +03:00 [INF] Route matched with {action = "Create", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid]] Create(Notes.WebApi.Models.CreateNoteDto) on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2023-06-09 14:51:32.952 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-06-09 14:51:32.954 +03:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.Create (Notes.WebApi) in 2.6419ms
+2023-06-09 14:51:32.956 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.Create (Notes.WebApi)'
+2023-06-09 14:51:32.957 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7124/api/1/Note application/json 126 - 400 - application/json;+charset=utf-8 18.3651ms
+2023-06-09 15:22:24.448 +03:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2023-06-09 15:22:24.750 +03:00 [INF] User profile is available. Using 'C:\Users\Honor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-06-09 15:22:25.025 +03:00 [INF] Now listening on: https://localhost:7124
+2023-06-09 15:22:25.033 +03:00 [INF] Now listening on: http://localhost:5124
+2023-06-09 15:22:25.045 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-06-09 15:22:25.068 +03:00 [INF] Hosting environment: Development
+2023-06-09 15:22:25.073 +03:00 [INF] Content root path: C:\Users\Honor\source\repos\Notes\NotesWebApi\Notes.WebApi\
+2023-06-09 15:26:50.862 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/index.html - -
+2023-06-09 15:26:51.279 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/index.html - - - 200 - text/html;charset=utf-8 421.2343ms
+2023-06-09 15:26:51.381 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/swagger-ui-standalone-preset.js - -
+2023-06-09 15:26:51.381 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/swagger-ui-bundle.js - -
+2023-06-09 15:26:51.382 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/_vs/browserLink - -
+2023-06-09 15:26:51.383 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/_framework/aspnetcore-browser-refresh.js - -
+2023-06-09 15:26:51.411 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/_framework/aspnetcore-browser-refresh.js - - - 200 11994 application/javascript;+charset=utf-8 27.4914ms
+2023-06-09 15:26:51.427 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 45.3155ms
+2023-06-09 15:26:51.429 +03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2023-06-09 15:26:51.429 +03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2023-06-09 15:26:51.431 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/swagger-ui-standalone-preset.js - - - 200 312163 application/javascript 50.6590ms
+2023-06-09 15:26:51.435 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/swagger-ui-bundle.js - - - 200 1061536 application/javascript 54.1231ms
+2023-06-09 15:26:51.746 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/favicon-32x32.png - -
+2023-06-09 15:26:51.749 +03:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2023-06-09 15:26:51.752 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/favicon-32x32.png - - - 200 628 image/png 5.5558ms
+2023-06-09 15:26:51.877 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/swagger/v1/swagger.json - -
+2023-06-09 15:26:52.106 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 229.0787ms
+2023-06-09 15:34:24.835 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/api/1/Room - -
+2023-06-09 15:34:25.267 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2023-06-09 15:34:25.288 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+2023-06-09 15:34:25.298 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+2023-06-09 15:34:25.302 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-06-09 15:34:25.313 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-06-09 15:34:25.315 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/api/1/Room - - - 401 0 - 480.2245ms
+2023-06-09 15:34:53.670 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/api/1/Room - -
+2023-06-09 15:34:53.674 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2023-06-09 15:34:53.678 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+2023-06-09 15:34:53.681 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+2023-06-09 15:34:53.683 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-06-09 15:34:53.685 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-06-09 15:34:53.687 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/api/1/Room - - - 401 0 - 16.8791ms
+2023-06-09 15:34:58.202 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7124/api/1.0/Note - -
+2023-06-09 15:34:58.206 +03:00 [INF] CORS policy execution successful.
+2023-06-09 15:34:58.210 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7124/api/1.0/Note - - - 204 - - 7.3049ms
+2023-06-09 15:34:58.214 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/api/1.0/Note - -
+2023-06-09 15:34:58.215 +03:00 [INF] CORS policy execution successful.
+2023-06-09 15:34:58.218 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2023-06-09 15:34:58.228 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+2023-06-09 15:34:58.232 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+2023-06-09 15:34:58.234 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-06-09 15:34:58.236 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-06-09 15:34:58.243 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/api/1.0/Note - - - 401 0 - 29.0718ms
+2023-06-09 15:34:58.248 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/api/1.0/Note - -
+2023-06-09 15:34:58.249 +03:00 [INF] CORS policy execution successful.
+2023-06-09 15:34:58.251 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2023-06-09 15:34:58.259 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+2023-06-09 15:34:58.260 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+2023-06-09 15:34:58.262 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-06-09 15:34:58.264 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-06-09 15:34:58.265 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/api/1.0/Note - - - 401 0 - 16.7951ms
+2023-06-09 15:35:15.796 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/api/1/Room - -
+2023-06-09 15:35:15.797 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2023-06-09 15:35:15.811 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+2023-06-09 15:35:15.812 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+2023-06-09 15:35:15.815 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-06-09 15:35:15.819 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-06-09 15:35:15.822 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/api/1/Room - - - 401 0 - 26.5468ms
+2023-06-09 15:36:14.776 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/api/1/Section/3fa85f64-5717-4562-b3fc-2c963f66afa6 - -
+2023-06-09 15:36:14.779 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2023-06-09 15:36:14.787 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+2023-06-09 15:36:14.788 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+2023-06-09 15:36:14.789 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-06-09 15:36:14.791 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-06-09 15:36:14.796 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/api/1/Section/3fa85f64-5717-4562-b3fc-2c963f66afa6 - - - 401 0 - 20.1421ms
+2023-06-09 15:36:38.136 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7124/api/1.0/Note - -
+2023-06-09 15:36:38.136 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7124/api/1.0/Note - -
+2023-06-09 15:36:38.138 +03:00 [INF] CORS policy execution successful.
+2023-06-09 15:36:38.139 +03:00 [INF] CORS policy execution successful.
+2023-06-09 15:36:38.142 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7124/api/1.0/Note - - - 204 - - 5.4428ms
+2023-06-09 15:36:38.143 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7124/api/1.0/Note - - - 204 - - 7.1174ms
+2023-06-09 15:36:38.150 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/api/1.0/Note - -
+2023-06-09 15:36:38.151 +03:00 [INF] CORS policy execution successful.
+2023-06-09 15:36:38.154 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/api/1.0/Note - -
+2023-06-09 15:36:38.156 +03:00 [INF] CORS policy execution successful.
+2023-06-09 15:36:38.197 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-06-09 15:36:38.197 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-06-09 15:36:38.237 +03:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNoteList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2023-06-09 15:36:38.237 +03:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNoteList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2023-06-09 15:36:38.468 +03:00 [INF] Notes Request: GetNoteListQuery "cb40d4d0-c90f-458e-b1ef-43db969210b4" {"UserId":"cb40d4d0-c90f-458e-b1ef-43db969210b4","$type":"GetNoteListQuery"}
+2023-06-09 15:36:38.468 +03:00 [INF] Notes Request: GetNoteListQuery "cb40d4d0-c90f-458e-b1ef-43db969210b4" {"UserId":"cb40d4d0-c90f-458e-b1ef-43db969210b4","$type":"GetNoteListQuery"}
+2023-06-09 15:36:38.905 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[@__ToLower_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "n"."NoteId", "n"."Title"
+FROM "Notes" AS "n"
+WHERE lower(CAST("n"."UserId" AS TEXT)) = @__ToLower_0
+2023-06-09 15:36:38.905 +03:00 [INF] Executed DbCommand (11ms) [Parameters=[@__ToLower_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "n"."NoteId", "n"."Title"
+FROM "Notes" AS "n"
+WHERE lower(CAST("n"."UserId" AS TEXT)) = @__ToLower_0
+2023-06-09 15:36:38.924 +03:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Application.Notes.Queries.GetNoteList.NoteListVm'.
+2023-06-09 15:36:38.924 +03:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Application.Notes.Queries.GetNoteList.NoteListVm'.
+2023-06-09 15:36:39.059 +03:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi) in 809.3903ms
+2023-06-09 15:36:39.059 +03:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi) in 812.4189ms
+2023-06-09 15:36:39.060 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-06-09 15:36:39.062 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-06-09 15:36:39.070 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/api/1.0/Note - - - 200 1288 application/json;+charset=utf-8 915.0401ms
+2023-06-09 15:36:39.070 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/api/1.0/Note - - - 200 1288 application/json;+charset=utf-8 919.6799ms
+2023-06-09 15:36:58.450 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/api/1/Room - -
+2023-06-09 15:36:58.453 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.RoomController.GetAll (Notes.WebApi)'
+2023-06-09 15:36:58.459 +03:00 [INF] Route matched with {action = "GetAll", controller = "Room"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Rooms.Queries.GetRoomList.RoomListVm]] GetAll() on controller Notes.WebApi.Controllers.RoomController (Notes.WebApi).
+2023-06-09 15:36:58.469 +03:00 [INF] Notes Request: GetRoomListQuery "cb40d4d0-c90f-458e-b1ef-43db969210b4" {"UserId":"cb40d4d0-c90f-458e-b1ef-43db969210b4","$type":"GetRoomListQuery"}
+2023-06-09 15:36:58.560 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__request_UserId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "r"."RoomId", "r"."Title"
+FROM "Rooms" AS "r"
+WHERE "r"."UserId" = @__request_UserId_0 AND "r"."IsActive"
+2023-06-09 15:36:58.563 +03:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Application.Rooms.Queries.GetRoomList.RoomListVm'.
+2023-06-09 15:36:58.567 +03:00 [INF] Executed action Notes.WebApi.Controllers.RoomController.GetAll (Notes.WebApi) in 101.5819ms
+2023-06-09 15:36:58.568 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.RoomController.GetAll (Notes.WebApi)'
+2023-06-09 15:36:58.569 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/api/1/Room - - - 200 81 application/json;+charset=utf-8 119.0598ms
+2023-06-09 15:37:10.091 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/api/1/Section/27540d06-1224-4dd7-a1cb-38f64c590160 - -
+2023-06-09 15:37:10.092 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.SectionController.GetAll (Notes.WebApi)'
+2023-06-09 15:37:10.111 +03:00 [INF] Route matched with {action = "GetAll", controller = "Section"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Sections.Queries.GetSectionDetails.SectionListVm]] GetAll(System.Guid) on controller Notes.WebApi.Controllers.SectionController (Notes.WebApi).
+2023-06-09 15:37:10.125 +03:00 [INF] Notes Request: GetSectionListQuery "cb40d4d0-c90f-458e-b1ef-43db969210b4" {"RoomId":"27540d06-1224-4dd7-a1cb-38f64c590160","$type":"GetSectionListQuery"}
+2023-06-09 15:37:10.237 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__request_RoomId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."SectionId", "s"."CreationDate", "s"."Details", "s"."IsActive", "s"."RoomId", "s"."Title", "n"."NoteId", "n"."CreationDate", "n"."Details", "n"."EditDate", "n"."ParentNoteId", "n"."SectionId", "n"."Title", "n"."UserId"
+FROM "Sections" AS "s"
+LEFT JOIN "Notes" AS "n" ON "s"."SectionId" = "n"."SectionId"
+WHERE "s"."IsActive" AND "s"."RoomId" = @__request_RoomId_0
+ORDER BY "s"."SectionId"
+2023-06-09 15:37:10.322 +03:00 [INF] Executing ObjectResult, writing value of type 'Notes.Application.Sections.Queries.GetSectionDetails.SectionListVm'.
+2023-06-09 15:37:10.331 +03:00 [INF] Executed action Notes.WebApi.Controllers.SectionController.GetAll (Notes.WebApi) in 217.4359ms
+2023-06-09 15:37:10.333 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.SectionController.GetAll (Notes.WebApi)'
+2023-06-09 15:37:10.337 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/api/1/Section/27540d06-1224-4dd7-a1cb-38f64c590160 - - - 200 235 application/json;+charset=utf-8 246.3096ms
+2023-06-09 15:41:58.432 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7124/api/1/Note text/json 123
+2023-06-09 15:41:58.434 +03:00 [INF] CORS policy execution successful.
+2023-06-09 15:41:58.436 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.Create (Notes.WebApi)'
+2023-06-09 15:41:58.441 +03:00 [INF] Route matched with {action = "Create", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid]] Create(Notes.WebApi.Models.CreateNoteDto) on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2023-06-09 15:41:58.550 +03:00 [INF] Notes Request: CreateNoteCommand "cb40d4d0-c90f-458e-b1ef-43db969210b4" {"UserId":"cb40d4d0-c90f-458e-b1ef-43db969210b4","Title":"string","Details":"string","ParentNoteId":"00000000-0000-0000-0000-000000000000","SectionId":"28e7cf86-8368-4219-87ea-99f04904de8a","$type":"CreateNoteCommand"}
+2023-06-09 15:41:58.754 +03:00 [ERR] Failed executing DbCommand (3ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime), @p2='?' (Size = 6), @p3='?' (DbType = DateTime), @p4='?' (DbType = Guid), @p5='?' (DbType = Guid), @p6='?' (Size = 6), @p7='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Notes" ("NoteId", "CreationDate", "Details", "EditDate", "ParentNoteId", "SectionId", "Title", "UserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+2023-06-09 15:41:58.776 +03:00 [ERR] An exception occurred in the database while saving changes for context type 'Notes.Persistence.NotesDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 19: 'FOREIGN KEY constraint failed'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 19: 'FOREIGN KEY constraint failed'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2023-06-09 15:41:58.807 +03:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.Create (Notes.WebApi) in 363.79ms
+2023-06-09 15:41:58.810 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.Create (Notes.WebApi)'
+2023-06-09 15:41:58.821 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7124/api/1/Note text/json 123 - 500 - application/json 388.3437ms
+2023-06-09 15:43:33.652 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7124/api/1/Note text/json 127
+2023-06-09 15:43:33.653 +03:00 [INF] CORS policy execution successful.
+2023-06-09 15:43:33.654 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.Create (Notes.WebApi)'
+2023-06-09 15:43:33.656 +03:00 [INF] Route matched with {action = "Create", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid]] Create(Notes.WebApi.Models.CreateNoteDto) on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2023-06-09 15:43:33.668 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-06-09 15:43:33.692 +03:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.Create (Notes.WebApi) in 35.3938ms
+2023-06-09 15:43:33.694 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.Create (Notes.WebApi)'
+2023-06-09 15:43:33.695 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7124/api/1/Note text/json 127 - 400 394 application/json;+charset=utf-8 43.6374ms
+2023-06-09 15:49:41.578 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7124/api/1/Note text/json 123
+2023-06-09 15:49:41.579 +03:00 [INF] CORS policy execution successful.
+2023-06-09 15:49:41.581 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.Create (Notes.WebApi)'
+2023-06-09 15:49:41.581 +03:00 [INF] Route matched with {action = "Create", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid]] Create(Notes.WebApi.Models.CreateNoteDto) on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2023-06-09 15:49:41.586 +03:00 [INF] Notes Request: CreateNoteCommand "cb40d4d0-c90f-458e-b1ef-43db969210b4" {"UserId":"cb40d4d0-c90f-458e-b1ef-43db969210b4","Title":"string","Details":"string","ParentNoteId":"00000000-0000-0000-0000-000000000000","SectionId":"28e7cf86-8368-4219-87ea-99f04904de8a","$type":"CreateNoteCommand"}
+2023-06-09 15:49:41.597 +03:00 [ERR] Failed executing DbCommand (2ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime), @p2='?' (Size = 6), @p3='?' (DbType = DateTime), @p4='?' (DbType = Guid), @p5='?' (DbType = Guid), @p6='?' (Size = 6), @p7='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Notes" ("NoteId", "CreationDate", "Details", "EditDate", "ParentNoteId", "SectionId", "Title", "UserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+2023-06-09 15:49:41.604 +03:00 [ERR] An exception occurred in the database while saving changes for context type 'Notes.Persistence.NotesDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 19: 'FOREIGN KEY constraint failed'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 19: 'FOREIGN KEY constraint failed'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2023-06-09 15:49:41.622 +03:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.Create (Notes.WebApi) in 37.5611ms
+2023-06-09 15:49:41.625 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.Create (Notes.WebApi)'
+2023-06-09 15:49:41.626 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7124/api/1/Note text/json 123 - 500 - application/json 48.1533ms
+2023-06-09 15:54:27.871 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7124/api/1/Note text/json 137
+2023-06-09 15:54:27.873 +03:00 [INF] CORS policy execution successful.
+2023-06-09 15:54:27.876 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.Create (Notes.WebApi)'
+2023-06-09 15:54:27.878 +03:00 [INF] Route matched with {action = "Create", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid]] Create(Notes.WebApi.Models.CreateNoteDto) on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2023-06-09 15:54:27.881 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-06-09 15:54:27.882 +03:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.Create (Notes.WebApi) in 2.6215ms
+2023-06-09 15:54:27.884 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.Create (Notes.WebApi)'
+2023-06-09 15:54:27.885 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7124/api/1/Note text/json 137 - 400 913 application/json;+charset=utf-8 13.7345ms
+2023-06-09 16:16:29.899 +03:00 [INF] Executed DbCommand (25ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2023-06-09 16:16:30.764 +03:00 [INF] User profile is available. Using 'C:\Users\Honor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-06-09 16:16:31.279 +03:00 [INF] Now listening on: https://localhost:7124
+2023-06-09 16:16:31.280 +03:00 [INF] Now listening on: http://localhost:5124
+2023-06-09 16:16:31.284 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-06-09 16:16:31.289 +03:00 [INF] Hosting environment: Development
+2023-06-09 16:16:31.294 +03:00 [INF] Content root path: C:\Users\Honor\source\repos\Notes\NotesWebApi\Notes.WebApi\
+2023-06-09 16:26:14.544 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7124/api/1/Note - -
+2023-06-09 16:26:14.632 +03:00 [INF] CORS policy execution successful.
+2023-06-09 16:26:14.653 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7124/api/1/Note - - - 204 - - 112.5299ms
+2023-06-09 16:26:14.655 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7124/api/1/Note application/json 128
+2023-06-09 16:26:14.672 +03:00 [INF] CORS policy execution successful.
+2023-06-09 16:26:14.760 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-06-09 16:26:14.772 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-06-09 16:26:14.775 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7124/api/1/Note application/json 128 - 401 0 - 119.6630ms
+2023-06-09 16:28:10.952 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7124/api/1/Note text/json 159
+2023-06-09 16:28:10.986 +03:00 [INF] CORS policy execution successful.
+2023-06-09 16:28:11.537 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.Create (Notes.WebApi)'
+2023-06-09 16:28:11.586 +03:00 [INF] Route matched with {action = "Create", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid]] Create(Notes.WebApi.Models.CreateNoteDto) on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2023-06-09 16:28:22.906 +03:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2023-06-09 16:28:23.051 +03:00 [INF] User profile is available. Using 'C:\Users\Honor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-06-09 16:28:23.146 +03:00 [INF] Now listening on: https://localhost:7124
+2023-06-09 16:28:23.147 +03:00 [INF] Now listening on: http://localhost:5124
+2023-06-09 16:28:23.148 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-06-09 16:28:23.149 +03:00 [INF] Hosting environment: Development
+2023-06-09 16:28:23.149 +03:00 [INF] Content root path: C:\Users\Honor\source\repos\Notes\NotesWebApi\Notes.WebApi\
+2023-06-09 16:28:41.297 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7124/api/1/Note text/json 162
+2023-06-09 16:28:41.350 +03:00 [INF] CORS policy execution successful.
+2023-06-09 16:28:41.651 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.Create (Notes.WebApi)'
+2023-06-09 16:28:41.679 +03:00 [INF] Route matched with {action = "Create", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid]] Create(Notes.WebApi.Models.CreateNoteDto) on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2023-06-09 16:28:41.995 +03:00 [INF] Notes Request: CreateNoteCommand "cb40d4d0-c90f-458e-b1ef-43db969210b4" {"UserId":"cb40d4d0-c90f-458e-b1ef-43db969210b4","Title":"firstNote","Details":"string","ParentNoteId":"28e7cf86-8368-4219-87ea-99f04904de8a","SectionId":"28e7cf86-8368-4219-87ea-99f04904de8a","$type":"CreateNoteCommand"}
+2023-06-09 16:28:42.205 +03:00 [ERR] Failed executing DbCommand (10ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime), @p2='?' (Size = 6), @p3='?' (DbType = DateTime), @p4='?' (DbType = Guid), @p5='?' (DbType = Guid), @p6='?' (Size = 9), @p7='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Notes" ("NoteId", "CreationDate", "Details", "EditDate", "ParentNoteId", "SectionId", "Title", "UserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+2023-06-09 16:28:42.251 +03:00 [ERR] An exception occurred in the database while saving changes for context type 'Notes.Persistence.NotesDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 19: 'FOREIGN KEY constraint failed'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 19: 'FOREIGN KEY constraint failed'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2023-06-09 16:28:42.275 +03:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.Create (Notes.WebApi) in 590.2657ms
+2023-06-09 16:28:42.277 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.Create (Notes.WebApi)'
+2023-06-09 16:28:42.357 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7124/api/1/Note text/json 162 - 500 - application/json 1063.3377ms
+2023-06-09 16:31:01.131 +03:00 [INF] Executed DbCommand (29ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2023-06-09 16:31:01.447 +03:00 [INF] User profile is available. Using 'C:\Users\Honor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-06-09 16:31:01.657 +03:00 [INF] Now listening on: https://localhost:7124
+2023-06-09 16:31:01.657 +03:00 [INF] Now listening on: http://localhost:5124
+2023-06-09 16:31:01.659 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-06-09 16:31:01.660 +03:00 [INF] Hosting environment: Development
+2023-06-09 16:31:01.661 +03:00 [INF] Content root path: C:\Users\Honor\source\repos\Notes\NotesWebApi\Notes.WebApi\
+2023-06-09 16:31:11.190 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7124/api/1/Note text/json 162
+2023-06-09 16:31:11.276 +03:00 [INF] CORS policy execution successful.
+2023-06-09 16:31:11.801 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.Create (Notes.WebApi)'
+2023-06-09 16:31:11.836 +03:00 [INF] Route matched with {action = "Create", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid]] Create(Notes.WebApi.Models.CreateNoteDto) on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2023-06-09 16:33:40.080 +03:00 [INF] Notes Request: CreateNoteCommand "cb40d4d0-c90f-458e-b1ef-43db969210b4" {"UserId":"cb40d4d0-c90f-458e-b1ef-43db969210b4","Title":"firstNote","Details":"string","ParentNoteId":"28e7cf86-8368-4219-87ea-99f04904de8a","SectionId":"28e7cf86-8368-4219-87ea-99f04904de8a","$type":"CreateNoteCommand"}
+2023-06-09 16:34:26.492 +03:00 [ERR] Failed executing DbCommand (11ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime), @p2='?' (Size = 6), @p3='?' (DbType = DateTime), @p4='?' (DbType = Guid), @p5='?' (DbType = Guid), @p6='?' (Size = 9), @p7='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Notes" ("NoteId", "CreationDate", "Details", "EditDate", "ParentNoteId", "SectionId", "Title", "UserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+2023-06-09 16:34:26.537 +03:00 [ERR] An exception occurred in the database while saving changes for context type 'Notes.Persistence.NotesDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 19: 'FOREIGN KEY constraint failed'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 19: 'FOREIGN KEY constraint failed'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2023-06-09 16:35:30.561 +03:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.Create (Notes.WebApi) in 258719.1885ms
+2023-06-09 16:35:30.568 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.Create (Notes.WebApi)'
+2023-06-09 16:38:31.691 +03:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2023-06-09 16:38:31.833 +03:00 [INF] User profile is available. Using 'C:\Users\Honor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-06-09 16:38:31.916 +03:00 [INF] Now listening on: https://localhost:7124
+2023-06-09 16:38:31.918 +03:00 [INF] Now listening on: http://localhost:5124
+2023-06-09 16:38:31.920 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-06-09 16:38:31.921 +03:00 [INF] Hosting environment: Development
+2023-06-09 16:38:31.921 +03:00 [INF] Content root path: C:\Users\Honor\source\repos\Notes\NotesWebApi\Notes.WebApi\
+2023-06-09 16:38:38.109 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7124/api/1/Note text/json 162
+2023-06-09 16:38:38.164 +03:00 [INF] CORS policy execution successful.
+2023-06-09 16:38:38.492 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.Create (Notes.WebApi)'
+2023-06-09 16:38:38.526 +03:00 [INF] Route matched with {action = "Create", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid]] Create(Notes.WebApi.Models.CreateNoteDto) on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2023-06-09 16:38:38.870 +03:00 [INF] Notes Request: CreateNoteCommand "cb40d4d0-c90f-458e-b1ef-43db969210b4" {"UserId":"cb40d4d0-c90f-458e-b1ef-43db969210b4","Title":"firstNote","Details":"string","ParentNoteId":"3fa85f64-5717-4562-b3fc-2c963f66afa6","SectionId":"28e7cf86-8368-4219-87ea-99f04904de8a","$type":"CreateNoteCommand"}
+2023-06-09 16:38:39.108 +03:00 [ERR] Failed executing DbCommand (10ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime), @p2='?' (Size = 6), @p3='?' (DbType = DateTime), @p4='?' (DbType = Guid), @p5='?' (DbType = Guid), @p6='?' (Size = 9), @p7='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Notes" ("NoteId", "CreationDate", "Details", "EditDate", "ParentNoteId", "SectionId", "Title", "UserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+2023-06-09 16:38:39.135 +03:00 [ERR] An exception occurred in the database while saving changes for context type 'Notes.Persistence.NotesDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 19: 'FOREIGN KEY constraint failed'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 19: 'FOREIGN KEY constraint failed'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2023-06-09 16:38:39.160 +03:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.Create (Notes.WebApi) in 629.4699ms
+2023-06-09 16:38:39.162 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.Create (Notes.WebApi)'
+2023-06-09 16:38:39.234 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7124/api/1/Note text/json 162 - 500 - application/json 1127.7070ms
+2023-06-09 17:35:42.841 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/api/1/Note - -
+2023-06-09 17:35:42.889 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2023-06-09 17:35:42.914 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+2023-06-09 17:35:42.922 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+2023-06-09 17:35:42.926 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-06-09 17:35:42.936 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-06-09 17:35:42.938 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/api/1/Note - - - 401 0 - 99.7074ms
+2023-06-09 17:36:10.958 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/api/1/Note - -
+2023-06-09 17:36:10.963 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2023-06-09 17:36:10.967 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+2023-06-09 17:36:10.971 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+2023-06-09 17:36:10.977 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-06-09 17:36:10.979 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-06-09 17:36:10.980 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/api/1/Note - - - 401 0 - 22.5304ms
+2023-06-09 17:36:20.723 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7124/api/1.0/Note - -
+2023-06-09 17:36:20.725 +03:00 [INF] CORS policy execution successful.
+2023-06-09 17:36:20.728 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7124/api/1.0/Note - - - 204 - - 5.4447ms
+2023-06-09 17:36:20.736 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/api/1.0/Note - -
+2023-06-09 17:36:20.737 +03:00 [INF] CORS policy execution successful.
+2023-06-09 17:36:20.739 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-06-09 17:36:20.754 +03:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNoteList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2023-06-09 17:36:20.785 +03:00 [INF] Notes Request: GetNoteListQuery "cb40d4d0-c90f-458e-b1ef-43db969210b4" {"UserId":"cb40d4d0-c90f-458e-b1ef-43db969210b4","$type":"GetNoteListQuery"}
+2023-06-09 17:36:21.229 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__ToLower_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "n"."NoteId", "n"."Title"
+FROM "Notes" AS "n"
+WHERE lower(CAST("n"."UserId" AS TEXT)) = @__ToLower_0
+2023-06-09 17:36:21.249 +03:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Application.Notes.Queries.GetNoteList.NoteListVm'.
+2023-06-09 17:36:21.303 +03:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi) in 547.0118ms
+2023-06-09 17:36:21.306 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-06-09 17:36:21.307 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/api/1.0/Note - - - 200 1288 application/json;+charset=utf-8 570.3373ms
+2023-06-09 17:36:21.309 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/api/1.0/Note - -
+2023-06-09 17:36:21.311 +03:00 [INF] CORS policy execution successful.
+2023-06-09 17:36:21.312 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-06-09 17:36:21.313 +03:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNoteList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2023-06-09 17:36:21.317 +03:00 [INF] Notes Request: GetNoteListQuery "cb40d4d0-c90f-458e-b1ef-43db969210b4" {"UserId":"cb40d4d0-c90f-458e-b1ef-43db969210b4","$type":"GetNoteListQuery"}
+2023-06-09 17:36:21.329 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__ToLower_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "n"."NoteId", "n"."Title"
+FROM "Notes" AS "n"
+WHERE lower(CAST("n"."UserId" AS TEXT)) = @__ToLower_0
+2023-06-09 17:36:21.335 +03:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Application.Notes.Queries.GetNoteList.NoteListVm'.
+2023-06-09 17:36:21.337 +03:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi) in 20.5048ms
+2023-06-09 17:36:21.338 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-06-09 17:36:21.339 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/api/1.0/Note - - - 200 1288 application/json;+charset=utf-8 29.4997ms
+2023-06-09 17:36:38.632 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/api/1/Note - -
+2023-06-09 17:36:38.634 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-06-09 17:36:38.635 +03:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNoteList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2023-06-09 17:36:38.642 +03:00 [INF] Notes Request: GetNoteListQuery "cb40d4d0-c90f-458e-b1ef-43db969210b4" {"UserId":"cb40d4d0-c90f-458e-b1ef-43db969210b4","$type":"GetNoteListQuery"}
+2023-06-09 17:36:38.649 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__ToLower_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "n"."NoteId", "n"."Title"
+FROM "Notes" AS "n"
+WHERE lower(CAST("n"."UserId" AS TEXT)) = @__ToLower_0
+2023-06-09 17:36:38.651 +03:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Application.Notes.Queries.GetNoteList.NoteListVm'.
+2023-06-09 17:36:38.652 +03:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi) in 12.3045ms
+2023-06-09 17:36:38.652 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-06-09 17:36:38.654 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/api/1/Note - - - 200 1288 application/json;+charset=utf-8 21.5927ms
+2023-06-09 17:45:47.156 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7124/api/1/Note text/json 162
+2023-06-09 17:45:47.158 +03:00 [INF] CORS policy execution successful.
+2023-06-09 17:45:47.159 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.Create (Notes.WebApi)'
+2023-06-09 17:45:47.159 +03:00 [INF] Route matched with {action = "Create", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid]] Create(Notes.WebApi.Models.CreateNoteDto) on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2023-06-09 17:45:47.165 +03:00 [INF] Notes Request: CreateNoteCommand "cb40d4d0-c90f-458e-b1ef-43db969210b4" {"UserId":"cb40d4d0-c90f-458e-b1ef-43db969210b4","Title":"firstNote","Details":"string","ParentNoteId":"bc73b4ef-8199-4070-aea4-0e3a4897693d","SectionId":"28e7cf86-8368-4219-87ea-99f04904de8a","$type":"CreateNoteCommand"}
+2023-06-09 17:45:47.178 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime), @p2='?' (Size = 6), @p3='?' (DbType = DateTime), @p4='?' (DbType = Guid), @p5='?' (DbType = Guid), @p6='?' (Size = 9), @p7='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Notes" ("NoteId", "CreationDate", "Details", "EditDate", "ParentNoteId", "SectionId", "Title", "UserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+2023-06-09 17:45:47.198 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Guid'.
+2023-06-09 17:45:47.202 +03:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.Create (Notes.WebApi) in 40.9823ms
+2023-06-09 17:45:47.203 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.Create (Notes.WebApi)'
+2023-06-09 17:45:47.204 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7124/api/1/Note text/json 162 - 200 38 application/json;+charset=utf-8 48.3544ms
+2023-06-09 17:46:13.651 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/api/1/Section/27540d06-1224-4dd7-a1cb-38f64c590160 - -
+2023-06-09 17:46:13.654 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.SectionController.GetAll (Notes.WebApi)'
+2023-06-09 17:46:13.659 +03:00 [INF] Route matched with {action = "GetAll", controller = "Section"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Sections.Queries.GetSectionDetails.SectionListVm]] GetAll(System.Guid) on controller Notes.WebApi.Controllers.SectionController (Notes.WebApi).
+2023-06-09 17:46:13.663 +03:00 [INF] Notes Request: GetSectionListQuery "cb40d4d0-c90f-458e-b1ef-43db969210b4" {"RoomId":"27540d06-1224-4dd7-a1cb-38f64c590160","$type":"GetSectionListQuery"}
+2023-06-09 17:46:13.768 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__request_RoomId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."SectionId", "s"."CreationDate", "s"."Details", "s"."IsActive", "s"."RoomId", "s"."Title", "n"."NoteId", "n"."CreationDate", "n"."Details", "n"."EditDate", "n"."ParentNoteId", "n"."SectionId", "n"."Title", "n"."UserId"
+FROM "Sections" AS "s"
+LEFT JOIN "Notes" AS "n" ON "s"."SectionId" = "n"."SectionId"
+WHERE "s"."IsActive" AND "s"."RoomId" = @__request_RoomId_0
+ORDER BY "s"."SectionId"
+2023-06-09 17:46:13.800 +03:00 [INF] Executing ObjectResult, writing value of type 'Notes.Application.Sections.Queries.GetSectionDetails.SectionListVm'.
+2023-06-09 17:46:13.823 +03:00 [INF] Executed action Notes.WebApi.Controllers.SectionController.GetAll (Notes.WebApi) in 162.3185ms
+2023-06-09 17:46:13.826 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.SectionController.GetAll (Notes.WebApi)'
+2023-06-09 17:46:13.831 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/api/1/Section/27540d06-1224-4dd7-a1cb-38f64c590160 - - - 500 - application/json 179.9862ms
+2023-06-09 17:53:53.042 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/api/1/Section/3fa85f64-5717-4562-b3fc-2c963f66afa6 - -
+2023-06-09 17:53:53.044 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.SectionController.GetAll (Notes.WebApi)'
+2023-06-09 17:53:53.046 +03:00 [INF] Route matched with {action = "GetAll", controller = "Section"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Sections.Queries.GetSectionDetails.SectionListVm]] GetAll(System.Guid) on controller Notes.WebApi.Controllers.SectionController (Notes.WebApi).
+2023-06-09 17:53:53.055 +03:00 [INF] Notes Request: GetSectionListQuery "cb40d4d0-c90f-458e-b1ef-43db969210b4" {"RoomId":"3fa85f64-5717-4562-b3fc-2c963f66afa6","$type":"GetSectionListQuery"}
+2023-06-09 17:53:53.061 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__request_RoomId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."SectionId", "s"."CreationDate", "s"."Details", "s"."IsActive", "s"."RoomId", "s"."Title", "n"."NoteId", "n"."CreationDate", "n"."Details", "n"."EditDate", "n"."ParentNoteId", "n"."SectionId", "n"."Title", "n"."UserId"
+FROM "Sections" AS "s"
+LEFT JOIN "Notes" AS "n" ON "s"."SectionId" = "n"."SectionId"
+WHERE "s"."IsActive" AND "s"."RoomId" = @__request_RoomId_0
+ORDER BY "s"."SectionId"
+2023-06-09 17:53:53.066 +03:00 [INF] Executing ObjectResult, writing value of type 'Notes.Application.Sections.Queries.GetSectionDetails.SectionListVm'.
+2023-06-09 17:53:53.073 +03:00 [INF] Executed action Notes.WebApi.Controllers.SectionController.GetAll (Notes.WebApi) in 19.9816ms
+2023-06-09 17:53:53.075 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.SectionController.GetAll (Notes.WebApi)'
+2023-06-09 17:53:53.078 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/api/1/Section/3fa85f64-5717-4562-b3fc-2c963f66afa6 - - - 200 15 application/json;+charset=utf-8 36.0767ms
+2023-06-09 17:54:53.027 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7124/api/1/Section application/json-patch+json 100
+2023-06-09 17:54:53.028 +03:00 [INF] CORS policy execution successful.
+2023-06-09 17:54:53.030 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.SectionController.Create (Notes.WebApi)'
+2023-06-09 17:54:53.033 +03:00 [INF] Route matched with {action = "Create", controller = "Section"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(Notes.WebApi.Models.CreateSectionDto) on controller Notes.WebApi.Controllers.SectionController (Notes.WebApi).
+2023-06-09 17:54:53.043 +03:00 [INF] Notes Request: CreateSectionCommand "cb40d4d0-c90f-458e-b1ef-43db969210b4" {"Title":"new rprc","Details":"string","RoomId":"3fa85f64-5717-4562-b3fc-2c963f66afa6","$type":"CreateSectionCommand"}
+2023-06-09 17:54:53.068 +03:00 [ERR] Failed executing DbCommand (2ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime), @p2='?' (Size = 6), @p3='?' (DbType = Boolean), @p4='?' (DbType = Guid), @p5='?' (Size = 8)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Sections" ("SectionId", "CreationDate", "Details", "IsActive", "RoomId", "Title")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2023-06-09 17:54:53.078 +03:00 [ERR] An exception occurred in the database while saving changes for context type 'Notes.Persistence.NotesDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 19: 'FOREIGN KEY constraint failed'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 19: 'FOREIGN KEY constraint failed'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2023-06-09 17:54:53.095 +03:00 [INF] Executed action Notes.WebApi.Controllers.SectionController.Create (Notes.WebApi) in 59.9952ms
+2023-06-09 17:54:53.096 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.SectionController.Create (Notes.WebApi)'
+2023-06-09 17:54:53.097 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7124/api/1/Section application/json-patch+json 100 - 500 - application/json 70.2884ms
+2023-06-09 18:05:26.089 +03:00 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2023-06-09 18:05:26.401 +03:00 [INF] User profile is available. Using 'C:\Users\Honor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-06-09 18:05:26.632 +03:00 [INF] Now listening on: https://localhost:7124
+2023-06-09 18:05:26.633 +03:00 [INF] Now listening on: http://localhost:5124
+2023-06-09 18:05:26.635 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-06-09 18:05:26.636 +03:00 [INF] Hosting environment: Development
+2023-06-09 18:05:26.637 +03:00 [INF] Content root path: C:\Users\Honor\source\repos\Notes\NotesWebApi\Notes.WebApi\
+2023-06-09 18:06:20.347 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/api/1/Section/27540d06-1224-4dd7-a1cb-38f64c590160 - -
+2023-06-09 18:06:21.099 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.SectionController.GetAll (Notes.WebApi)'
+2023-06-09 18:06:21.134 +03:00 [INF] Route matched with {action = "GetAll", controller = "Section"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Sections.Queries.GetSectionDetails.SectionListVm]] GetAll(System.Guid) on controller Notes.WebApi.Controllers.SectionController (Notes.WebApi).
+2023-06-09 18:06:21.337 +03:00 [INF] Notes Request: GetSectionListQuery "cb40d4d0-c90f-458e-b1ef-43db969210b4" {"RoomId":"27540d06-1224-4dd7-a1cb-38f64c590160","$type":"GetSectionListQuery"}
+2023-06-09 18:06:21.949 +03:00 [INF] Executed DbCommand (12ms) [Parameters=[@__request_RoomId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."SectionId", "s"."CreationDate", "s"."Details", "s"."IsActive", "s"."RoomId", "s"."Title", "n"."NoteId", "n"."CreationDate", "n"."Details", "n"."EditDate", "n"."ParentNoteId", "n"."SectionId", "n"."Title", "n"."UserId"
+FROM "Sections" AS "s"
+LEFT JOIN "Notes" AS "n" ON "s"."SectionId" = "n"."SectionId"
+WHERE "s"."IsActive" AND "s"."RoomId" = @__request_RoomId_0
+ORDER BY "s"."SectionId"
+2023-06-09 18:06:22.110 +03:00 [INF] Executing ObjectResult, writing value of type 'Notes.Application.Sections.Queries.GetSectionDetails.SectionListVm'.
+2023-06-09 18:06:22.243 +03:00 [INF] Executed action Notes.WebApi.Controllers.SectionController.GetAll (Notes.WebApi) in 1101.8301ms
+2023-06-09 18:06:22.246 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.SectionController.GetAll (Notes.WebApi)'
+2023-06-09 18:06:22.467 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/api/1/Section/27540d06-1224-4dd7-a1cb-38f64c590160 - - - 500 - application/json 2122.1048ms
+2023-06-09 18:07:41.375 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/api/1/Room - -
+2023-06-09 18:07:41.379 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.RoomController.GetAll (Notes.WebApi)'
+2023-06-09 18:07:41.384 +03:00 [INF] Route matched with {action = "GetAll", controller = "Room"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Rooms.Queries.GetRoomList.RoomListVm]] GetAll() on controller Notes.WebApi.Controllers.RoomController (Notes.WebApi).
+2023-06-09 18:07:41.389 +03:00 [INF] Notes Request: GetRoomListQuery "cb40d4d0-c90f-458e-b1ef-43db969210b4" {"UserId":"cb40d4d0-c90f-458e-b1ef-43db969210b4","$type":"GetRoomListQuery"}
+2023-06-09 18:07:41.488 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__request_UserId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "r"."RoomId", "r"."Title"
+FROM "Rooms" AS "r"
+WHERE "r"."UserId" = @__request_UserId_0 AND "r"."IsActive"
+2023-06-09 18:07:41.493 +03:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Application.Rooms.Queries.GetRoomList.RoomListVm'.
+2023-06-09 18:07:41.504 +03:00 [INF] Executed action Notes.WebApi.Controllers.RoomController.GetAll (Notes.WebApi) in 117.6012ms
+2023-06-09 18:07:41.506 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.RoomController.GetAll (Notes.WebApi)'
+2023-06-09 18:07:41.508 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/api/1/Room - - - 200 81 application/json;+charset=utf-8 132.9141ms
+2023-06-09 18:07:56.026 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7124/api/1/Section application/json-patch+json 100
+2023-06-09 18:07:56.032 +03:00 [INF] CORS policy execution successful.
+2023-06-09 18:07:56.034 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.SectionController.Create (Notes.WebApi)'
+2023-06-09 18:07:56.038 +03:00 [INF] Route matched with {action = "Create", controller = "Section"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(Notes.WebApi.Models.CreateSectionDto) on controller Notes.WebApi.Controllers.SectionController (Notes.WebApi).
+2023-06-09 18:07:56.137 +03:00 [INF] Notes Request: CreateSectionCommand "cb40d4d0-c90f-458e-b1ef-43db969210b4" {"Title":"new rprc","Details":"string","RoomId":"27540d06-1224-4dd7-a1cb-38f64c590160","$type":"CreateSectionCommand"}
+2023-06-09 18:07:56.355 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime), @p2='?' (Size = 6), @p3='?' (DbType = Boolean), @p4='?' (DbType = Guid), @p5='?' (Size = 8)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Sections" ("SectionId", "CreationDate", "Details", "IsActive", "RoomId", "Title")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2023-06-09 18:08:52.500 +03:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Domain.Section'.
+2023-06-09 18:08:52.521 +03:00 [INF] Executed action Notes.WebApi.Controllers.SectionController.Create (Notes.WebApi) in 56480.5823ms
+2023-06-09 18:08:52.521 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.SectionController.Create (Notes.WebApi)'
+2023-06-09 18:08:59.253 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7124/api/1/Section application/json-patch+json 100 - 200 228 application/json;+charset=utf-8 63226.2449ms
+2023-06-09 18:09:50.775 +03:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2023-06-09 18:09:50.931 +03:00 [INF] User profile is available. Using 'C:\Users\Honor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-06-09 18:09:51.015 +03:00 [INF] Now listening on: https://localhost:7124
+2023-06-09 18:09:51.016 +03:00 [INF] Now listening on: http://localhost:5124
+2023-06-09 18:09:51.018 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-06-09 18:09:51.018 +03:00 [INF] Hosting environment: Development
+2023-06-09 18:09:51.019 +03:00 [INF] Content root path: C:\Users\Honor\source\repos\Notes\NotesWebApi\Notes.WebApi\
+2023-06-09 18:09:59.342 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7124/api/1/Section application/json-patch+json 100
+2023-06-09 18:09:59.391 +03:00 [INF] CORS policy execution successful.
+2023-06-09 18:09:59.698 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.SectionController.Create (Notes.WebApi)'
+2023-06-09 18:09:59.732 +03:00 [INF] Route matched with {action = "Create", controller = "Section"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(Notes.WebApi.Models.CreateSectionDto) on controller Notes.WebApi.Controllers.SectionController (Notes.WebApi).
+2023-06-09 18:09:59.990 +03:00 [INF] Notes Request: CreateSectionCommand "cb40d4d0-c90f-458e-b1ef-43db969210b4" {"Title":"new rprc","Details":"string","RoomId":"27540d06-1224-4dd7-a1cb-38f64c590160","$type":"CreateSectionCommand"}
+2023-06-09 18:10:00.196 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime), @p2='?' (Size = 6), @p3='?' (DbType = Boolean), @p4='?' (DbType = Guid), @p5='?' (Size = 8)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Sections" ("SectionId", "CreationDate", "Details", "IsActive", "RoomId", "Title")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2023-06-09 18:10:00.216 +03:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Domain.Section'.
+2023-06-09 18:10:00.256 +03:00 [INF] Executed action Notes.WebApi.Controllers.SectionController.Create (Notes.WebApi) in 516.4431ms
+2023-06-09 18:10:00.258 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.SectionController.Create (Notes.WebApi)'
+2023-06-09 18:10:00.266 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7124/api/1/Section application/json-patch+json 100 - 200 227 application/json;+charset=utf-8 927.0163ms
+2023-06-09 18:10:58.510 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7124/api/1/Note text/json 162
+2023-06-09 18:10:58.514 +03:00 [INF] CORS policy execution successful.
+2023-06-09 18:10:58.519 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.Create (Notes.WebApi)'
+2023-06-09 18:10:58.522 +03:00 [INF] Route matched with {action = "Create", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid]] Create(Notes.WebApi.Models.CreateNoteDto) on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2023-06-09 18:10:58.587 +03:00 [INF] Notes Request: CreateNoteCommand "cb40d4d0-c90f-458e-b1ef-43db969210b4" {"UserId":"cb40d4d0-c90f-458e-b1ef-43db969210b4","Title":"firstNote","Details":"string","ParentNoteId":"bc73b4ef-8199-4070-aea4-0e3a4897693d","SectionId":"0c8781ca-cc1d-4140-91ea-9b9dfd488257","$type":"CreateNoteCommand"}
+2023-06-09 18:10:58.692 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime), @p2='?' (Size = 6), @p3='?' (DbType = DateTime), @p4='?' (DbType = Guid), @p5='?' (DbType = Guid), @p6='?' (Size = 9), @p7='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Notes" ("NoteId", "CreationDate", "Details", "EditDate", "ParentNoteId", "SectionId", "Title", "UserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+2023-06-09 18:10:58.703 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Guid'.
+2023-06-09 18:10:58.704 +03:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.Create (Notes.WebApi) in 180.7277ms
+2023-06-09 18:10:58.706 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.Create (Notes.WebApi)'
+2023-06-09 18:10:58.708 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7124/api/1/Note text/json 162 - 200 38 application/json;+charset=utf-8 197.6910ms
+2023-06-09 18:11:46.787 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/api/1/Section/27540d06-1224-4dd7-a1cb-38f64c590160 - -
+2023-06-09 18:11:46.795 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.SectionController.GetAll (Notes.WebApi)'
+2023-06-09 18:11:46.801 +03:00 [INF] Route matched with {action = "GetAll", controller = "Section"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Sections.Queries.GetSectionDetails.SectionListVm]] GetAll(System.Guid) on controller Notes.WebApi.Controllers.SectionController (Notes.WebApi).
+2023-06-09 18:11:46.806 +03:00 [INF] Notes Request: GetSectionListQuery "cb40d4d0-c90f-458e-b1ef-43db969210b4" {"RoomId":"27540d06-1224-4dd7-a1cb-38f64c590160","$type":"GetSectionListQuery"}
+2023-06-09 18:11:47.128 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__request_RoomId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."SectionId", "s"."CreationDate", "s"."Details", "s"."IsActive", "s"."RoomId", "s"."Title", "n"."NoteId", "n"."CreationDate", "n"."Details", "n"."EditDate", "n"."ParentNoteId", "n"."SectionId", "n"."Title", "n"."UserId"
+FROM "Sections" AS "s"
+LEFT JOIN "Notes" AS "n" ON "s"."SectionId" = "n"."SectionId"
+WHERE "s"."IsActive" AND "s"."RoomId" = @__request_RoomId_0
+ORDER BY "s"."SectionId"
+2023-06-09 18:11:47.143 +03:00 [INF] Executing ObjectResult, writing value of type 'Notes.Application.Sections.Queries.GetSectionDetails.SectionListVm'.
+2023-06-09 18:11:47.152 +03:00 [INF] Executed action Notes.WebApi.Controllers.SectionController.GetAll (Notes.WebApi) in 348.8574ms
+2023-06-09 18:11:47.153 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.SectionController.GetAll (Notes.WebApi)'
+2023-06-09 18:11:47.218 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/api/1/Section/27540d06-1224-4dd7-a1cb-38f64c590160 - - - 500 - application/json 430.8707ms
+2023-06-09 18:12:45.135 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/index.html - -
+2023-06-09 18:12:45.268 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/index.html - - - 200 - text/html;charset=utf-8 133.1110ms
+2023-06-09 18:12:45.333 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/swagger-ui-bundle.js - -
+2023-06-09 18:12:45.333 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/swagger-ui-standalone-preset.js - -
+2023-06-09 18:12:45.339 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/_vs/browserLink - -
+2023-06-09 18:12:45.340 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/_framework/aspnetcore-browser-refresh.js - -
+2023-06-09 18:12:45.346 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/_framework/aspnetcore-browser-refresh.js - - - 200 11994 application/javascript;+charset=utf-8 6.3069ms
+2023-06-09 18:12:45.360 +03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2023-06-09 18:12:45.362 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/swagger-ui-standalone-preset.js - - - 200 312163 application/javascript 29.0570ms
+2023-06-09 18:12:45.371 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 31.8292ms
+2023-06-09 18:12:45.376 +03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2023-06-09 18:12:45.378 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/swagger-ui-bundle.js - - - 200 1061536 application/javascript 45.3452ms
+2023-06-09 18:12:45.606 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/favicon-32x32.png - -
+2023-06-09 18:12:45.608 +03:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2023-06-09 18:12:45.610 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/favicon-32x32.png - - - 200 628 image/png 3.6655ms
+2023-06-09 18:12:45.683 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/swagger/v1/swagger.json - -
+2023-06-09 18:12:45.794 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 110.9123ms
