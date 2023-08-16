@@ -1,0 +1,137 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Notes.WebApi</name>
+    </assembly>
+    <members>
+        <member name="M:Notes.WebApi.Controllers.NoteController.GetAll">
+            <summary>
+            Gets the list of notes
+            </summary>
+            <remarks>
+            Sample requests
+            GET /note
+            </remarks>
+            <returns>Returns NoteListVm</returns>
+            <response code="200">Success</response>
+            <response code="401">If the user is unauthorized</response>
+        </member>
+        <member name="M:Notes.WebApi.Controllers.NoteController.Get(System.Guid)">
+            <summary>
+            Gets the note by id
+            </summary>
+            <remarks>
+            Sample request:
+            GET /note/D34D349E-43B8-429E-BCA4-793C932FD580
+            </remarks>
+            <param name="id">Note id (guid)</param>
+            <returns>Returns NoteDetailsVm</returns>
+            <response code="200">Success</response>
+            <response code="401">If the user in unauthorized</response>
+        </member>
+        <member name="M:Notes.WebApi.Controllers.NoteController.Create(Notes.WebApi.Models.CreateNoteDto)">
+            <summary>
+            Create the note
+            </summary>
+            <remarks>
+            Sample requests:
+            Post /note
+            {
+                title: "note title",
+                details: "note details"
+            }
+            </remarks>   
+            <param name="createNoteDto">CreateNoteDto object</param>
+            <returns>Returns id (guid)</returns>
+            <response code="201">Success</response>
+            <response code="401">If the user is unauthorized</response>
+        </member>
+        <member name="M:Notes.WebApi.Controllers.NoteController.Update(Notes.WebApi.Models.UpdateNoteDto)">
+            <summary>
+            Updates the note
+            </summary>
+            <remarks>
+            Sample request:
+            PUT /note
+            {
+                title: "updated note title"
+            }
+            </remarks>
+            <param name="updateNoteDto">UpdateNoteDto object</param>
+            <returns>Returns NoContent</returns>
+            <response code="204">Success</response>
+            <response code="401">If the user is unauthorized</response>
+        </member>
+        <member name="M:Notes.WebApi.Controllers.NoteController.Delete(System.Guid)">
+            <summary>
+            Delete the note by id
+            </summary>
+            <remarks>
+            Sample request:
+            DELETE /node/88DEB432-062F-43DE-8DCD-8B6EF79073D3
+            </remarks>
+            <param name="id">Id of the note (guid)</param>
+            <returns>Returns NoContent</returns>
+            <response code="204">Success</response>
+            <response code="401">if the user is unauthorized</response>
+        </member>
+        <member name="M:Notes.WebApi.Controllers.RoomController.GetAll">
+            <summary>
+            Gets the list of node
+            </summary>
+            <remarks>
+            Sample requests
+            GET /note
+            </remarks>
+            <returns>Returns RoomListVm</returns>
+            <response code="200">Success</response>
+            <response code="401">If the user is unauthorized</response>
+        </member>
+        <member name="M:Notes.WebApi.Controllers.RoomController.Create(Notes.WebApi.Models.CreateRoomDto)">
+            <summary>
+            Create the room
+            </summary>
+            <param name="createRoomDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Notes.WebApi.Controllers.RoomController.Update(Notes.WebApi.Models.UpdateRoomDto)">
+            <summary>
+            Update the room
+            </summary>
+            <param name="updateRoomDto"></param>
+        </member>
+        <member name="M:Notes.WebApi.Controllers.RoomController.Delete(System.Guid)">
+            <summary>
+            Delete the room
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Notes.WebApi.Controllers.SectionController.GetAll(System.Guid)">
+            <summary>
+            Gets all the sections
+            </summary>
+            <param name="roomId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Notes.WebApi.Controllers.SectionController.Create(Notes.WebApi.Models.CreateSectionDto)">
+            <summary>
+            Create the section
+            </summary>
+            <param name="createSectionDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Notes.WebApi.Controllers.SectionController.Update(Notes.WebApi.Models.UpdateSectionDto)">
+            <summary>
+            Update the section
+            </summary>
+            <param name="updateSectionDto"></param>
+        </member>
+        <member name="M:Notes.WebApi.Controllers.SectionController.Delete(System.Guid)">
+            <summary>
+            Delete the section
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
