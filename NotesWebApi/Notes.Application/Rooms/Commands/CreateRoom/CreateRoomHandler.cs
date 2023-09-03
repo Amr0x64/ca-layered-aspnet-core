@@ -28,7 +28,7 @@ namespace Notes.Application.Rooms.Commands.CreateRoom
                 UserId = request.UserId
             };
 
-            await _dbContext.Rooms.AddAsync(room, cancellationToken);
+            await _dbContext.rooms.AddAsync(room, cancellationToken);
             await _dbContext.SaveChangesAsync(cancellationToken);
 
             return room.RoomId;

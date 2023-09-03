@@ -1,0 +1,17 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Notes.Application",
+    "\\Notes.Application\\Sections",
+    "\\Notes.Application\\Sections\\Commands",
+    "\\Notes.Application\\Sections\\Commands\\CreateSection",
+    "\\Notes.Application\\Sections\\Commands\\DeleteSection",
+    "\\Notes.Application\\Sections\\Commands\\UpdateSection",
+    "\\Notes.Tests",
+    "\\Notes.Tests\\Common",
+    "\\Notes.Tests\\Notes",
+    "\\Notes.Tests\\Notes\\Queries"
+  ],
+  "SelectedNode": "\\NotesWebApi.sln",
+  "PreviewInSolutionExplorer": false
+}

@@ -1,0 +1,163 @@
+2023-08-17 15:31:57.932 +03:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2023-08-17 15:31:57.986 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2023-08-17 15:31:58.000 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2023-08-17 15:31:58.020 +03:00 [INF] Applying migration '20230324121740_notes'.
+2023-08-17 15:31:58.084 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "ef_temp_Notes" (
+    "NoteId" TEXT NOT NULL CONSTRAINT "PK_Notes" PRIMARY KEY,
+    "CreationDate" TEXT NOT NULL,
+    "Details" TEXT NULL,
+    "EditDate" TEXT NULL,
+    "Title" TEXT NOT NULL,
+    "UserId" TEXT NOT NULL
+);
+2023-08-17 15:31:58.084 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "ef_temp_Notes" ("NoteId", "CreationDate", "Details", "EditDate", "Title", "UserId")
+SELECT "NoteId", "CreationDate", "Details", "EditDate", "Title", "UserId"
+FROM "Notes";
+2023-08-17 15:31:58.091 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys = 0;
+2023-08-17 15:31:58.092 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DROP TABLE "Notes";
+2023-08-17 15:31:58.093 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "ef_temp_Notes" RENAME TO "Notes";
+2023-08-17 15:31:58.094 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys = 1;
+2023-08-17 15:31:58.095 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_Notes_NoteId" ON "Notes" ("NoteId");
+2023-08-17 15:31:58.095 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20230324121740_notes', '7.0.3');
+2023-08-17 15:31:58.096 +03:00 [INF] Applying migration '20230511104719_NoteMigr'.
+2023-08-17 15:31:58.107 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "Notes" ADD "ParentNoteId" TEXT NULL;
+2023-08-17 15:31:58.108 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_Notes_ParentNoteId" ON "Notes" ("ParentNoteId");
+2023-08-17 15:31:58.108 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "ef_temp_Notes" (
+    "NoteId" TEXT NOT NULL CONSTRAINT "PK_Notes" PRIMARY KEY,
+    "CreationDate" TEXT NOT NULL,
+    "Details" TEXT NULL,
+    "EditDate" TEXT NULL,
+    "ParentNoteId" TEXT NULL,
+    "Title" TEXT NOT NULL,
+    "UserId" TEXT NOT NULL,
+    CONSTRAINT "FK_Notes_Notes_ParentNoteId" FOREIGN KEY ("ParentNoteId") REFERENCES "Notes" ("NoteId")
+);
+2023-08-17 15:31:58.108 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "ef_temp_Notes" ("NoteId", "CreationDate", "Details", "EditDate", "ParentNoteId", "Title", "UserId")
+SELECT "NoteId", "CreationDate", "Details", "EditDate", "ParentNoteId", "Title", "UserId"
+FROM "Notes";
+2023-08-17 15:31:58.109 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys = 0;
+2023-08-17 15:31:58.110 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DROP TABLE "Notes";
+2023-08-17 15:31:58.110 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "ef_temp_Notes" RENAME TO "Notes";
+2023-08-17 15:31:58.112 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys = 1;
+2023-08-17 15:31:58.112 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_Notes_NoteId" ON "Notes" ("NoteId");
+2023-08-17 15:31:58.112 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_Notes_ParentNoteId" ON "Notes" ("ParentNoteId");
+2023-08-17 15:31:58.113 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20230511104719_NoteMigr', '7.0.3');
+2023-08-17 15:31:58.114 +03:00 [INF] Applying migration '20230516145043_Section'.
+2023-08-17 15:31:58.129 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "Notes" ADD "SectionId" TEXT NULL;
+2023-08-17 15:31:58.129 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Rooms" (
+    "RoomId" TEXT NOT NULL CONSTRAINT "PK_Rooms" PRIMARY KEY,
+    "Title" TEXT NOT NULL,
+    "CreationDate" TEXT NOT NULL,
+    "IsActive" INTEGER NOT NULL,
+    "UserId" TEXT NOT NULL
+);
+2023-08-17 15:31:58.129 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Sections" (
+    "SectionId" TEXT NOT NULL CONSTRAINT "PK_Sections" PRIMARY KEY,
+    "Title" TEXT NOT NULL,
+    "Details" TEXT NULL,
+    "RoomId" TEXT NOT NULL,
+    CONSTRAINT "FK_Sections_Rooms_RoomId" FOREIGN KEY ("RoomId") REFERENCES "Rooms" ("RoomId") ON DELETE CASCADE
+);
+2023-08-17 15:31:58.129 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_Notes_SectionId" ON "Notes" ("SectionId");
+2023-08-17 15:31:58.130 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_Rooms_RoomId" ON "Rooms" ("RoomId");
+2023-08-17 15:31:58.130 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_Sections_RoomId" ON "Sections" ("RoomId");
+2023-08-17 15:31:58.130 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_Sections_SectionId" ON "Sections" ("SectionId");
+2023-08-17 15:31:58.130 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "ef_temp_Notes" (
+    "NoteId" TEXT NOT NULL CONSTRAINT "PK_Notes" PRIMARY KEY,
+    "CreationDate" TEXT NOT NULL,
+    "Details" TEXT NULL,
+    "EditDate" TEXT NULL,
+    "ParentNoteId" TEXT NULL,
+    "SectionId" TEXT NULL,
+    "Title" TEXT NOT NULL,
+    "UserId" TEXT NOT NULL,
+    CONSTRAINT "FK_Notes_Notes_ParentNoteId" FOREIGN KEY ("ParentNoteId") REFERENCES "Notes" ("NoteId"),
+    CONSTRAINT "FK_Notes_Sections_SectionId" FOREIGN KEY ("SectionId") REFERENCES "Sections" ("SectionId")
+);
+2023-08-17 15:31:58.130 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "ef_temp_Notes" ("NoteId", "CreationDate", "Details", "EditDate", "ParentNoteId", "SectionId", "Title", "UserId")
+SELECT "NoteId", "CreationDate", "Details", "EditDate", "ParentNoteId", "SectionId", "Title", "UserId"
+FROM "Notes";
+2023-08-17 15:31:58.133 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys = 0;
+2023-08-17 15:31:58.133 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DROP TABLE "Notes";
+2023-08-17 15:31:58.134 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "ef_temp_Notes" RENAME TO "Notes";
+2023-08-17 15:31:58.135 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys = 1;
+2023-08-17 15:31:58.136 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_Notes_NoteId" ON "Notes" ("NoteId");
+2023-08-17 15:31:58.136 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_Notes_ParentNoteId" ON "Notes" ("ParentNoteId");
+2023-08-17 15:31:58.136 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_Notes_SectionId" ON "Notes" ("SectionId");
+2023-08-17 15:31:58.136 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20230516145043_Section', '7.0.3');
+2023-08-17 15:31:58.137 +03:00 [INF] Applying migration '20230517142256_l3'.
+2023-08-17 15:31:58.143 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "Sections" ADD "CreationDate" TEXT NOT NULL DEFAULT '0001-01-01 00:00:00';
+2023-08-17 15:31:58.144 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20230517142256_l3', '7.0.3');
+2023-08-17 15:31:58.532 +03:00 [INF] Applying migration '20230607093926_sectio'.
+2023-08-17 15:31:58.538 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "Sections" ADD "IsActive" INTEGER NOT NULL DEFAULT 0;
+2023-08-17 15:31:58.539 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20230607093926_sectio', '7.0.3');
+2023-08-17 15:31:58.540 +03:00 [INF] Applying migration '20230817122920_newTable'.
+2023-08-17 15:31:58.552 +03:00 [ERR] Failed executing DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "Notes" ADD "SectionId" TEXT NULL;
+2023-08-17 16:27:34.665 +03:00 [INF] Executed DbCommand (63ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2023-08-17 16:27:34.894 +03:00 [INF] Executed DbCommand (29ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "__EFMigrationsHistory" (
+    "MigrationId" character varying(150) NOT NULL,
+    "ProductVersion" character varying(32) NOT NULL,
+    CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY ("MigrationId")
+);
+2023-08-17 16:27:34.956 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2023-08-17 16:27:34.961 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2023-08-17 16:27:34.981 +03:00 [INF] Applying migration '20230324121740_notes'.
+2023-08-17 16:27:35.025 +03:00 [ERR] Failed executing DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "Notes" ALTER COLUMN "Details" DROP NOT NULL;

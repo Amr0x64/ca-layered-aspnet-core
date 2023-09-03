@@ -24,7 +24,7 @@ namespace Notes.Application.Notes.Queries.GetNoteList
 
         public async Task<NoteListVm> Handle(GetNoteListQuery request, CancellationToken cancellationToken)
         {
-            var notesQuery = await _db.Notes.Where(note => note.UserId.ToString().ToLower() 
+            var notesQuery = await _db.notes.Where(note => note.UserId.ToString().ToLower() 
             == request.UserId.ToString().ToLower())
                 .ProjectTo<NoteLookupDto>(_mapper.ConfigurationProvider)
                 .ToListAsync(cancellationToken);

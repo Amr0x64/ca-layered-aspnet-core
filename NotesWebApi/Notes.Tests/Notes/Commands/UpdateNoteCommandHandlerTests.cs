@@ -30,7 +30,7 @@ namespace Notes.Tests.Notes.Commands
                 CancellationToken.None);
 
             Assert.NotNull(
-                await Context.Notes.SingleOrDefaultAsync(note =>
+                await Context.notes.SingleOrDefaultAsync(note =>
                 note.NoteId == NotesContextFactory.NoteIdForUpdate && note.Title == updateTitle
                 && note.Details == updateDetails));
 

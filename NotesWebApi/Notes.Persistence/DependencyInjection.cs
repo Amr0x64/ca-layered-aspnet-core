@@ -16,7 +16,7 @@ namespace Notes.Persistence
         {
             var connectionString = configuration["DbConnection"];
             services.AddDbContext<NotesDbContext>(opt =>
-                opt.UseSqlite(connectionString));
+                opt.UseNpgsql(connectionString));
             services.AddScoped<INotesDbContext>(provider =>
                 provider.GetService<NotesDbContext>());
 

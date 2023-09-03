@@ -29,7 +29,7 @@ namespace Notes.Application.Notes.Commands.CreateNote
                 EditDate = null
             };
 
-            await _dbContext.Notes.AddAsync(note, cancellationToken);
+            await _dbContext.notes.AddAsync(note, cancellationToken);
             await _dbContext.SaveChangesAsync(cancellationToken);
 
             return note.NoteId;

@@ -10,9 +10,9 @@ namespace Notes.Application.Interfaces
 {
     public interface INotesDbContext
     {
-        DbSet<Note> Notes { get; set; }
-        public DbSet<Room> Rooms { get; set; }
-        public DbSet<Section> Sections { get; set; }
+        DbSet<Note> notes { get; set; }
+        public DbSet<Room> rooms { get; set; }
+        public DbSet<Section> sections { get; set; }
 
         Task<int> SaveChangesAsync(CancellationToken cancellationToken);
     }

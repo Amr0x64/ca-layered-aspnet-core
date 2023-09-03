@@ -14,7 +14,7 @@ namespace Notes.Application.Rooms.Queries.GetRoomList
             (_db, _mapper) = (db, mapper);
         public async Task<RoomListVm> Handle(GetRoomListQuery request, CancellationToken cancellationToken)
         {
-            var roomsQuery = await _db.Rooms.Where(room => room.UserId == request.UserId && room.IsActive)
+            var roomsQuery = await _db.rooms.Where(room => room.UserId == request.UserId && room.IsActive)
                 .ProjectTo<RoomLookupDto>(_mapper.ConfigurationProvider)
                 .ToListAsync(cancellationToken);
 

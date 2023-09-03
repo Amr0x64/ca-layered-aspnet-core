@@ -19,7 +19,7 @@ namespace Notes.WebApi.Controllers
     [ApiVersion("1.0")]
     [Produces("application/json")]
     [Route("api/{version:apiVersion}/[controller]")]
-    [Authorize(AuthenticationSchemes = "Bearer")]
+    //[Authorize(AuthenticationSchemes = "Bearer")]
     public class RoomController : BaseController
     {
         private readonly IMapper _mapper;

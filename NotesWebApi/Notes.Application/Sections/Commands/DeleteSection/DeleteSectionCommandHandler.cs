@@ -20,7 +20,7 @@ namespace Notes.Application.Sections.Commands.DeleteSection
 
         public async Task<Guid> Handle(DeleteSectionCommand request, CancellationToken cancellationToken)
         {
-            var section = await _db.Sections.Include(r => r.Room).Select(r => new Section { SectionId = r.SectionId, 
+            var section = await _db.sections.Include(r => r.Room).Select(r => new Section { SectionId = r.SectionId, 
                 IsActive = r.IsActive, Room = r.Room})
                 .FirstOrDefaultAsync(sec => sec.SectionId == request.SectionId, cancellationToken);
 

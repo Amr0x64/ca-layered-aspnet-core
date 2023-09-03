@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VGgqkVw2+R8gFRVdkZeCkfYQBg6AkfRkqhw4BcXpZpC3DO7kzRFBzyKm58s3XIEBliRr6QHsJldW4bbTMQmRdQ==",
+  "dgSpecHash": "lQXm0r7pC/PbrD2z0mdNzbgB7yakIv5X0pnHxKB9Qu9S1Sb//k2kJ/HOi9aXlcVZ4I8ISqzFwjTg1FBVEAlsIQ==",
   "success": true,
-  "projectFilePath": "D:\\Notes\\NotesWebApi\\Notes.Domain\\Notes.Domain.csproj",
+  "projectFilePath": "D:\\Note\\NotesWebApi\\Notes.Domain\\Notes.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

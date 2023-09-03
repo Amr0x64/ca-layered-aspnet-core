@@ -14,7 +14,7 @@ namespace Notes.Application.Sections.Commands.UpdateSection
             (_db) = (db);
         public async Task<Section> Handle(UpdateSectionCommand request, CancellationToken cancellationToken)
         {
-            var section = await _db.Sections.Include(r => r.Room).
+            var section = await _db.sections.Include(r => r.Room).
                 FirstOrDefaultAsync(sec => sec.SectionId == request.SectionId, cancellationToken);
             
             if (section == null || section.Room.UserId != request.UserId)

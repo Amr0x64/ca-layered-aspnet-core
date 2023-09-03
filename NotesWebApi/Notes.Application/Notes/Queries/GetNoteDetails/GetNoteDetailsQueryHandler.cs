@@ -25,7 +25,7 @@ namespace Notes.Application.Notes.Queries.GetNoteDetails
 
         public async Task<NoteDetailsVm> Handle(GetNoteDetailsQuery request, CancellationToken cancellationToken)
         {
-            var entity = await _db.Notes.FirstOrDefaultAsync(note => note.NoteId == request.NoteId, cancellationToken);
+            var entity = await _db.notes.FirstOrDefaultAsync(note => note.NoteId == request.NoteId, cancellationToken);
 
             if (entity == null || entity.UserId != request.UserId)
             {

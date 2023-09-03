@@ -13,11 +13,14 @@ namespace Notes.Persistence
 {
     public class NotesDbContext : DbContext, INotesDbContext
     {
-        public DbSet<Note> Notes { get; set; }
-        public DbSet<Room> Rooms{ get; set; }
-        public DbSet<Section> Sections { get; set; }
+        public DbSet<Note> notes { get; set; }
+        public DbSet<Room> rooms { get; set; }
+        public DbSet<Section> sections { get; set; }
 
-        public NotesDbContext(DbContextOptions<NotesDbContext> options) : base(options) { }
+        public NotesDbContext(DbContextOptions<NotesDbContext> options) : base(options) 
+        {
+            
+        }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

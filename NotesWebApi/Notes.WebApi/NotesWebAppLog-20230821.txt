@@ -1,0 +1,404 @@
+2023-08-21 13:43:27.796 +03:00 [INF] Executed DbCommand (160ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM pg_class AS cls
+JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+WHERE
+        cls.relkind IN ('r', 'v', 'm', 'f', 'p') AND
+        ns.nspname NOT IN ('pg_catalog', 'information_schema') AND
+        -- Exclude tables which are members of PG extensions
+        NOT EXISTS (
+            SELECT 1 FROM pg_depend WHERE
+                classid=(
+                    SELECT cls.oid
+                    FROM pg_class AS cls
+                             JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+                    WHERE relname='pg_class' AND ns.nspname='pg_catalog'
+                ) AND
+                objid=cls.oid AND
+                deptype IN ('e', 'x')
+        )
+2023-08-21 13:43:28.224 +03:00 [INF] User profile is available. Using 'C:\Users\amir-\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-08-21 13:43:28.507 +03:00 [INF] Now listening on: https://localhost:7124
+2023-08-21 13:43:28.509 +03:00 [INF] Now listening on: http://localhost:5124
+2023-08-21 13:43:28.512 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-21 13:43:28.514 +03:00 [INF] Hosting environment: Development
+2023-08-21 13:43:28.516 +03:00 [INF] Content root path: D:\Note\NotesWebApi\Notes.WebApi\
+2023-08-21 13:50:07.482 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/ - -
+2023-08-21 13:50:07.602 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/ - - - 301 0 - 125.3472ms
+2023-08-21 13:50:07.607 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/index.html - -
+2023-08-21 13:50:07.949 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/index.html - - - 200 - text/html;charset=utf-8 341.6960ms
+2023-08-21 13:50:08.004 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/swagger-ui.css - -
+2023-08-21 13:50:08.004 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/swagger-ui-bundle.js - -
+2023-08-21 13:50:08.007 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/swagger-ui-standalone-preset.js - -
+2023-08-21 13:50:08.007 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/_vs/browserLink - -
+2023-08-21 13:50:08.010 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/_framework/aspnetcore-browser-refresh.js - -
+2023-08-21 13:50:08.029 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/_framework/aspnetcore-browser-refresh.js - - - 200 12356 application/javascript;+charset=utf-8 18.7153ms
+2023-08-21 13:50:08.036 +03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2023-08-21 13:50:08.036 +03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2023-08-21 13:50:08.036 +03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2023-08-21 13:50:08.039 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/swagger-ui.css - - - 200 144929 text/css 34.9481ms
+2023-08-21 13:50:08.040 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/swagger-ui-standalone-preset.js - - - 200 312163 application/javascript 33.3478ms
+2023-08-21 13:50:08.043 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/swagger-ui-bundle.js - - - 200 1061536 application/javascript 38.3768ms
+2023-08-21 13:50:08.061 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 53.5965ms
+2023-08-21 13:50:08.193 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/favicon-32x32.png - -
+2023-08-21 13:50:08.194 +03:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2023-08-21 13:50:08.197 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/favicon-32x32.png - - - 200 628 image/png 3.8278ms
+2023-08-21 13:50:08.254 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/swagger/v1/swagger.json - -
+2023-08-21 13:50:08.527 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 273.4544ms
+2023-08-21 14:16:53.480 +03:00 [INF] Executed DbCommand (60ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM pg_class AS cls
+JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+WHERE
+        cls.relkind IN ('r', 'v', 'm', 'f', 'p') AND
+        ns.nspname NOT IN ('pg_catalog', 'information_schema') AND
+        -- Exclude tables which are members of PG extensions
+        NOT EXISTS (
+            SELECT 1 FROM pg_depend WHERE
+                classid=(
+                    SELECT cls.oid
+                    FROM pg_class AS cls
+                             JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+                    WHERE relname='pg_class' AND ns.nspname='pg_catalog'
+                ) AND
+                objid=cls.oid AND
+                deptype IN ('e', 'x')
+        )
+2023-08-21 14:16:53.624 +03:00 [INF] User profile is available. Using 'C:\Users\amir-\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-08-21 14:16:53.709 +03:00 [INF] Now listening on: https://localhost:7124
+2023-08-21 14:16:53.711 +03:00 [INF] Now listening on: http://localhost:5124
+2023-08-21 14:16:53.712 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-21 14:16:53.713 +03:00 [INF] Hosting environment: Development
+2023-08-21 14:16:53.714 +03:00 [INF] Content root path: D:\Note\NotesWebApi\Notes.WebApi\
+2023-08-21 14:17:07.855 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/index.html - -
+2023-08-21 14:17:08.001 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/index.html - - - 200 - text/html;charset=utf-8 147.7883ms
+2023-08-21 14:17:08.040 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/_framework/aspnetcore-browser-refresh.js - -
+2023-08-21 14:17:08.040 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/_vs/browserLink - -
+2023-08-21 14:17:08.049 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/_framework/aspnetcore-browser-refresh.js - - - 200 12356 application/javascript;+charset=utf-8 8.1692ms
+2023-08-21 14:17:08.055 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 14.9960ms
+2023-08-21 14:17:08.224 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/swagger/v1/swagger.json - -
+2023-08-21 14:17:08.337 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 112.9388ms
+2023-08-21 14:18:01.130 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/api/1/Room - -
+2023-08-21 14:18:02.013 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.RoomController.GetAll (Notes.WebApi)'
+2023-08-21 14:18:02.047 +03:00 [INF] Route matched with {action = "GetAll", controller = "Room"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Rooms.Queries.GetRoomList.RoomListVm]] GetAll() on controller Notes.WebApi.Controllers.RoomController (Notes.WebApi).
+2023-08-21 14:18:02.261 +03:00 [INF] Notes Request: GetRoomListQuery "00000000-0000-0000-0000-000000000000" {"UserId":"00000000-0000-0000-0000-000000000000","$type":"GetRoomListQuery"}
+2023-08-21 14:18:02.618 +03:00 [ERR] Failed executing DbCommand (29ms) [Parameters=[@__request_UserId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT r."RoomId", r."Title"
+FROM rooms AS r
+WHERE r."UserId" = @__request_UserId_0 AND r."IsActive"
+2023-08-21 14:18:02.666 +03:00 [ERR] An exception occurred while iterating over the results of a query for context type 'Notes.Persistence.NotesDbContext'.
+Npgsql.PostgresException (0x80004005): 42P01: отношение "rooms" не существует
+
+POSITION: 36
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|233_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+  Exception data:
+    Severity: ОШИБКА
+    SqlState: 42P01
+    MessageText: отношение "rooms" не существует
+    Position: 36
+    File: parse_relation.c
+    Line: 1395
+    Routine: parserOpenTable
+Npgsql.PostgresException (0x80004005): 42P01: отношение "rooms" не существует
+
+POSITION: 36
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|233_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+  Exception data:
+    Severity: ОШИБКА
+    SqlState: 42P01
+    MessageText: отношение "rooms" не существует
+    Position: 36
+    File: parse_relation.c
+    Line: 1395
+    Routine: parserOpenTable
+2023-08-21 14:18:02.695 +03:00 [INF] Executed action Notes.WebApi.Controllers.RoomController.GetAll (Notes.WebApi) in 641.3312ms
+2023-08-21 14:18:02.698 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.RoomController.GetAll (Notes.WebApi)'
+2023-08-21 14:18:02.708 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/api/1/Room - - - 500 - application/json 1578.8063ms
+2023-08-21 14:20:29.439 +03:00 [INF] Executed DbCommand (59ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM pg_class AS cls
+JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+WHERE
+        cls.relkind IN ('r', 'v', 'm', 'f', 'p') AND
+        ns.nspname NOT IN ('pg_catalog', 'information_schema') AND
+        -- Exclude tables which are members of PG extensions
+        NOT EXISTS (
+            SELECT 1 FROM pg_depend WHERE
+                classid=(
+                    SELECT cls.oid
+                    FROM pg_class AS cls
+                             JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+                    WHERE relname='pg_class' AND ns.nspname='pg_catalog'
+                ) AND
+                objid=cls.oid AND
+                deptype IN ('e', 'x')
+        )
+2023-08-21 14:20:29.581 +03:00 [INF] User profile is available. Using 'C:\Users\amir-\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-08-21 14:20:29.662 +03:00 [INF] Now listening on: https://localhost:7124
+2023-08-21 14:20:29.664 +03:00 [INF] Now listening on: http://localhost:5124
+2023-08-21 14:20:29.667 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-21 14:20:29.668 +03:00 [INF] Hosting environment: Development
+2023-08-21 14:20:29.669 +03:00 [INF] Content root path: D:\Note\NotesWebApi\Notes.WebApi\
+2023-08-21 14:20:29.968 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/index.html - -
+2023-08-21 14:20:30.099 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/index.html - - - 200 - text/html;charset=utf-8 132.5900ms
+2023-08-21 14:20:30.125 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/_vs/browserLink - -
+2023-08-21 14:20:30.125 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/_framework/aspnetcore-browser-refresh.js - -
+2023-08-21 14:20:30.131 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/_framework/aspnetcore-browser-refresh.js - - - 200 12356 application/javascript;+charset=utf-8 5.5967ms
+2023-08-21 14:20:30.137 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 12.2529ms
+2023-08-21 14:20:30.473 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/swagger/v1/swagger.json - -
+2023-08-21 14:20:30.568 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 95.4792ms
+2023-08-21 14:50:55.393 +03:00 [INF] Executed DbCommand (63ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM pg_class AS cls
+JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+WHERE
+        cls.relkind IN ('r', 'v', 'm', 'f', 'p') AND
+        ns.nspname NOT IN ('pg_catalog', 'information_schema') AND
+        -- Exclude tables which are members of PG extensions
+        NOT EXISTS (
+            SELECT 1 FROM pg_depend WHERE
+                classid=(
+                    SELECT cls.oid
+                    FROM pg_class AS cls
+                             JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+                    WHERE relname='pg_class' AND ns.nspname='pg_catalog'
+                ) AND
+                objid=cls.oid AND
+                deptype IN ('e', 'x')
+        )
+2023-08-21 14:50:55.558 +03:00 [INF] User profile is available. Using 'C:\Users\amir-\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-08-21 14:50:55.655 +03:00 [INF] Now listening on: https://localhost:7124
+2023-08-21 14:50:55.656 +03:00 [INF] Now listening on: http://localhost:5124
+2023-08-21 14:50:55.659 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-21 14:50:55.660 +03:00 [INF] Hosting environment: Development
+2023-08-21 14:50:55.662 +03:00 [INF] Content root path: D:\Note\NotesWebApi\Notes.WebApi\
+2023-08-21 14:50:55.948 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/index.html - -
+2023-08-21 14:50:56.105 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/index.html - - - 200 - text/html;charset=utf-8 159.5609ms
+2023-08-21 14:50:56.139 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/_framework/aspnetcore-browser-refresh.js - -
+2023-08-21 14:50:56.140 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/_vs/browserLink - -
+2023-08-21 14:50:56.144 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/_framework/aspnetcore-browser-refresh.js - - - 200 12356 application/javascript;+charset=utf-8 5.1551ms
+2023-08-21 14:50:56.157 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 17.2915ms
+2023-08-21 14:50:56.500 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/favicon-32x32.png - -
+2023-08-21 14:50:56.517 +03:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2023-08-21 14:50:56.519 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/favicon-32x32.png - - - 0 628 image/png 18.2812ms
+2023-08-21 14:50:56.570 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/swagger/v1/swagger.json - -
+2023-08-21 14:50:56.715 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 144.7600ms
+2023-08-21 14:56:54.781 +03:00 [INF] Executed DbCommand (372ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE DATABASE notedb;
+2023-08-21 14:56:55.064 +03:00 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE rooms (
+    "RoomId" uuid NOT NULL,
+    "Title" text NOT NULL,
+    "CreationDate" timestamp with time zone NOT NULL,
+    "IsActive" boolean NOT NULL,
+    "UserId" uuid NOT NULL,
+    CONSTRAINT "PK_rooms" PRIMARY KEY ("RoomId")
+);
+2023-08-21 14:56:55.075 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE sections (
+    "SectionId" uuid NOT NULL,
+    "Title" text NOT NULL,
+    "Details" text NULL,
+    "CreationDate" timestamp with time zone NOT NULL,
+    "IsActive" boolean NOT NULL,
+    "RoomId" uuid NOT NULL,
+    CONSTRAINT "PK_sections" PRIMARY KEY ("SectionId"),
+    CONSTRAINT "FK_sections_rooms_RoomId" FOREIGN KEY ("RoomId") REFERENCES rooms ("RoomId") ON DELETE CASCADE
+);
+2023-08-21 14:56:55.081 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE notes (
+    "NoteId" uuid NOT NULL,
+    "UserId" uuid NOT NULL,
+    "Title" character varying(250) NOT NULL,
+    "Details" text NULL,
+    "CreationDate" timestamp with time zone NOT NULL,
+    "EditDate" timestamp with time zone NULL,
+    "SectionId" uuid NOT NULL,
+    CONSTRAINT "PK_notes" PRIMARY KEY ("NoteId"),
+    CONSTRAINT "FK_notes_sections_SectionId" FOREIGN KEY ("SectionId") REFERENCES sections ("SectionId") ON DELETE CASCADE
+);
+2023-08-21 14:56:55.085 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_notes_NoteId" ON notes ("NoteId");
+2023-08-21 14:56:55.089 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_notes_SectionId" ON notes ("SectionId");
+2023-08-21 14:56:55.093 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_sections_RoomId" ON sections ("RoomId");
+2023-08-21 14:56:55.216 +03:00 [INF] User profile is available. Using 'C:\Users\amir-\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-08-21 14:56:55.346 +03:00 [INF] Now listening on: https://localhost:7124
+2023-08-21 14:56:55.348 +03:00 [INF] Now listening on: http://localhost:5124
+2023-08-21 14:56:55.349 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-21 14:56:55.350 +03:00 [INF] Hosting environment: Development
+2023-08-21 14:56:55.350 +03:00 [INF] Content root path: D:\Note\NotesWebApi\Notes.WebApi\
+2023-08-21 14:57:07.838 +03:00 [INF] Executed DbCommand (180ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM pg_class AS cls
+JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+WHERE
+        cls.relkind IN ('r', 'v', 'm', 'f', 'p') AND
+        ns.nspname NOT IN ('pg_catalog', 'information_schema') AND
+        -- Exclude tables which are members of PG extensions
+        NOT EXISTS (
+            SELECT 1 FROM pg_depend WHERE
+                classid=(
+                    SELECT cls.oid
+                    FROM pg_class AS cls
+                             JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+                    WHERE relname='pg_class' AND ns.nspname='pg_catalog'
+                ) AND
+                objid=cls.oid AND
+                deptype IN ('e', 'x')
+        )
+2023-08-21 14:57:08.067 +03:00 [INF] User profile is available. Using 'C:\Users\amir-\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-08-21 14:57:08.163 +03:00 [INF] Now listening on: https://localhost:7124
+2023-08-21 14:57:08.164 +03:00 [INF] Now listening on: http://localhost:5124
+2023-08-21 14:57:08.166 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-21 14:57:08.167 +03:00 [INF] Hosting environment: Development
+2023-08-21 14:57:08.168 +03:00 [INF] Content root path: D:\Note\NotesWebApi\Notes.WebApi\
+2023-08-21 15:01:04.855 +03:00 [INF] Executed DbCommand (74ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM pg_class AS cls
+JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+WHERE
+        cls.relkind IN ('r', 'v', 'm', 'f', 'p') AND
+        ns.nspname NOT IN ('pg_catalog', 'information_schema') AND
+        -- Exclude tables which are members of PG extensions
+        NOT EXISTS (
+            SELECT 1 FROM pg_depend WHERE
+                classid=(
+                    SELECT cls.oid
+                    FROM pg_class AS cls
+                             JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+                    WHERE relname='pg_class' AND ns.nspname='pg_catalog'
+                ) AND
+                objid=cls.oid AND
+                deptype IN ('e', 'x')
+        )
+2023-08-21 15:01:04.951 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM pg_class AS cls
+JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+WHERE
+        cls.relkind IN ('r', 'v', 'm', 'f', 'p') AND
+        ns.nspname NOT IN ('pg_catalog', 'information_schema') AND
+        -- Exclude tables which are members of PG extensions
+        NOT EXISTS (
+            SELECT 1 FROM pg_depend WHERE
+                classid=(
+                    SELECT cls.oid
+                    FROM pg_class AS cls
+                             JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+                    WHERE relname='pg_class' AND ns.nspname='pg_catalog'
+                ) AND
+                objid=cls.oid AND
+                deptype IN ('e', 'x')
+        )
+2023-08-21 15:01:05.057 +03:00 [INF] User profile is available. Using 'C:\Users\amir-\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-08-21 15:01:05.142 +03:00 [INF] Now listening on: https://localhost:7124
+2023-08-21 15:01:05.144 +03:00 [INF] Now listening on: http://localhost:5124
+2023-08-21 15:01:05.146 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-21 15:01:05.147 +03:00 [INF] Hosting environment: Development
+2023-08-21 15:01:05.147 +03:00 [INF] Content root path: D:\Note\NotesWebApi\Notes.WebApi\
+2023-08-21 15:12:24.858 +03:00 [INF] Application is shutting down...
+2023-08-21 15:14:31.604 +03:00 [INF] Executed DbCommand (111ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM pg_class AS cls
+JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+WHERE
+        cls.relkind IN ('r', 'v', 'm', 'f', 'p') AND
+        ns.nspname NOT IN ('pg_catalog', 'information_schema') AND
+        -- Exclude tables which are members of PG extensions
+        NOT EXISTS (
+            SELECT 1 FROM pg_depend WHERE
+                classid=(
+                    SELECT cls.oid
+                    FROM pg_class AS cls
+                             JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+                    WHERE relname='pg_class' AND ns.nspname='pg_catalog'
+                ) AND
+                objid=cls.oid AND
+                deptype IN ('e', 'x')
+        )
+2023-08-21 15:14:31.893 +03:00 [INF] User profile is available. Using 'C:\Users\amir-\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-08-21 15:14:32.110 +03:00 [INF] Now listening on: https://localhost:7124
+2023-08-21 15:14:32.111 +03:00 [INF] Now listening on: http://localhost:5124
+2023-08-21 15:14:32.113 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-21 15:14:32.115 +03:00 [INF] Hosting environment: Development
+2023-08-21 15:14:32.116 +03:00 [INF] Content root path: D:\Note\NotesWebApi\Notes.WebApi\
+2023-08-21 16:49:07.654 +03:00 [INF] Executed DbCommand (57ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2023-08-21 16:49:07.735 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2023-08-21 16:49:07.751 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2023-08-21 16:49:07.767 +03:00 [INF] Applying migration '20230821134638_lala'.
+2023-08-21 16:49:07.836 +03:00 [INF] Executed DbCommand (27ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE rooms (
+    "RoomId" uuid NOT NULL,
+    "Title" text NOT NULL,
+    "CreationDate" timestamp with time zone NOT NULL,
+    "IsActive" boolean NOT NULL,
+    "UserId" uuid NOT NULL,
+    CONSTRAINT "PK_rooms" PRIMARY KEY ("RoomId")
+);
+2023-08-21 16:49:07.846 +03:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE sections (
+    "SectionId" uuid NOT NULL,
+    "Title" text NOT NULL,
+    "Details" text NULL,
+    "CreationDate" timestamp with time zone NOT NULL,
+    "IsActive" boolean NOT NULL,
+    "RoomId" uuid NULL,
+    CONSTRAINT "PK_sections" PRIMARY KEY ("SectionId"),
+    CONSTRAINT "FK_sections_rooms_RoomId" FOREIGN KEY ("RoomId") REFERENCES rooms ("RoomId") ON DELETE SET NULL
+);
+2023-08-21 16:49:07.851 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE notes (
+    "NoteId" uuid NOT NULL,
+    "UserId" uuid NOT NULL,
+    "Title" character varying(250) NOT NULL,
+    "Details" text NULL,
+    "CreationDate" timestamp with time zone NOT NULL,
+    "EditDate" timestamp with time zone NULL,
+    "SectionId" uuid NULL,
+    CONSTRAINT "PK_notes" PRIMARY KEY ("NoteId"),
+    CONSTRAINT "FK_notes_sections_SectionId" FOREIGN KEY ("SectionId") REFERENCES sections ("SectionId") ON DELETE SET NULL
+);
+2023-08-21 16:49:07.854 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_notes_NoteId" ON notes ("NoteId");
+2023-08-21 16:49:07.856 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_notes_SectionId" ON notes ("SectionId");
+2023-08-21 16:49:07.859 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_sections_RoomId" ON sections ("RoomId");
+2023-08-21 16:49:07.861 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20230821134638_lala', '7.0.10');

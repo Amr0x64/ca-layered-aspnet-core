@@ -15,7 +15,7 @@ namespace Notes.Application.Rooms.Commands.DeleteRoom
 
         public async Task<Unit> Handle(DeleteRoomCommand request, CancellationToken cancellationToken)
         {
-            var entity = await _db.Rooms.FirstOrDefaultAsync(room => room.RoomId == request.RoomId);
+            var entity = await _db.rooms.FirstOrDefaultAsync(room => room.RoomId == request.RoomId);
 
             if (entity == null || entity.UserId != request.UserId)
             {

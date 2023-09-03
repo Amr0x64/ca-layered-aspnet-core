@@ -21,14 +21,14 @@ namespace Notes.Application.Notes.Commands.DeleteCommand
 
         public async Task<Unit> Handle(DeleteNoteCommand request, CancellationToken cancellationToken)
         {
-            var entity = await _db.Notes.FindAsync(new object[] { request.NoteId }, cancellationToken);
+            var entity = await _db.notes.FindAsync(new object[] { request.NoteId }, cancellationToken);
 
             if (entity == null || entity.UserId != request.UserId)
             {
                 throw new NotFoundException(nameof(Note), request.NoteId);
             }
 
-            _db.Notes.Remove(entity);
+            _db.notes.Remove(entity);
             await _db.SaveChangesAsync(cancellationToken);
 
             return Unit.Value;

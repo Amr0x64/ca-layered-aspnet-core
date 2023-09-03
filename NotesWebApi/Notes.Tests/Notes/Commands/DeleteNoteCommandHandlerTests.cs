@@ -26,7 +26,7 @@ namespace Notes.Tests.Notes.Commands
             }, CancellationToken.None); 
 
             // Assert
-            Assert.Null(Context.Notes.SingleOrDefault(note =>
+            Assert.Null(Context.notes.SingleOrDefault(note =>
                 note.NoteId == NotesContextFactory.NoteIdForDelete));
         }
 

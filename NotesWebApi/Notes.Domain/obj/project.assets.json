@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Notes\\NotesWebApi\\Notes.Domain\\Notes.Domain.csproj",
+      "projectUniqueName": "D:\\Note\\NotesWebApi\\Notes.Domain\\Notes.Domain.csproj",
       "projectName": "Notes.Domain",
-      "projectPath": "D:\\Notes\\NotesWebApi\\Notes.Domain\\Notes.Domain.csproj",
+      "projectPath": "D:\\Note\\NotesWebApi\\Notes.Domain\\Notes.Domain.csproj",
       "packagesPath": "C:\\Users\\amir-\\.nuget\\packages\\",
-      "outputPath": "D:\\Notes\\NotesWebApi\\Notes.Domain\\obj\\",
+      "outputPath": "D:\\Note\\NotesWebApi\\Notes.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

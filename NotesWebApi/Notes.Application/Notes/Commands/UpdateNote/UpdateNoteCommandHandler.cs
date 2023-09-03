@@ -22,7 +22,7 @@ namespace Notes.Application.Notes.Commands.UpdateNote
 
         public async Task<Unit> Handle(UpdateNoteCommand request, CancellationToken cancellationToken)
         {
-            var entity = await _dbContext.Notes.FirstOrDefaultAsync(n => n.NoteId == request.NoteId, cancellationToken);
+            var entity = await _dbContext.notes.FirstOrDefaultAsync(n => n.NoteId == request.NoteId, cancellationToken);
 
             if (entity == null || entity.UserId != request.UserId)
             {

@@ -20,7 +20,7 @@ namespace Notes.Tests.Common
                 .Options;
             var context = new NotesDbContext(options);
             context.Database.EnsureCreated();
-            context.Notes.AddRange(
+            context.notes.AddRange(
                 new Note
                 {
                     CreationDate = DateTime.Today,

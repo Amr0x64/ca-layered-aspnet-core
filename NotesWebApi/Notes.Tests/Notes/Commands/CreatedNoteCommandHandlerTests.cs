@@ -31,7 +31,7 @@ namespace Notes.Tests.Notes.Commands
 
             // Assert
             Assert.NotNull(
-                await Context.Notes.SingleOrDefaultAsync(note =>
+                await Context.notes.SingleOrDefaultAsync(note =>
                 note.NoteId == noteId && note.Title == noteName && note.Details == noteDetails));
         }
     }

@@ -33,3 +33,14 @@ D:\Notes\NotesWebApi\Notes.Domain\obj\Debug\net6.0\Notes.Domain.dll
 D:\Notes\NotesWebApi\Notes.Domain\obj\Debug\net6.0\refint\Notes.Domain.dll
 D:\Notes\NotesWebApi\Notes.Domain\obj\Debug\net6.0\Notes.Domain.pdb
 D:\Notes\NotesWebApi\Notes.Domain\obj\Debug\net6.0\ref\Notes.Domain.dll
+D:\Note\NotesWebApi\Notes.Domain\bin\Debug\net6.0\Notes.Domain.deps.json
+D:\Note\NotesWebApi\Notes.Domain\bin\Debug\net6.0\Notes.Domain.dll
+D:\Note\NotesWebApi\Notes.Domain\bin\Debug\net6.0\Notes.Domain.pdb
+D:\Note\NotesWebApi\Notes.Domain\obj\Debug\net6.0\Notes.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Note\NotesWebApi\Notes.Domain\obj\Debug\net6.0\Notes.Domain.AssemblyInfoInputs.cache
+D:\Note\NotesWebApi\Notes.Domain\obj\Debug\net6.0\Notes.Domain.AssemblyInfo.cs
+D:\Note\NotesWebApi\Notes.Domain\obj\Debug\net6.0\Notes.Domain.csproj.CoreCompileInputs.cache
+D:\Note\NotesWebApi\Notes.Domain\obj\Debug\net6.0\Notes.Domain.dll
+D:\Note\NotesWebApi\Notes.Domain\obj\Debug\net6.0\refint\Notes.Domain.dll
+D:\Note\NotesWebApi\Notes.Domain\obj\Debug\net6.0\Notes.Domain.pdb
+D:\Note\NotesWebApi\Notes.Domain\obj\Debug\net6.0\ref\Notes.Domain.dll

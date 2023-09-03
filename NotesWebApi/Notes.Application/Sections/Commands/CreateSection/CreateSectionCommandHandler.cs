@@ -23,7 +23,7 @@ namespace Notes.Application.Sections.Commands.CreateSection
                 RoomId = request.RoomId
             };
 
-            await _db.Sections.AddAsync(section, cancellationToken);
+            await _db.sections.AddAsync(section, cancellationToken);
             await _db.SaveChangesAsync(cancellationToken);
 
             return section;

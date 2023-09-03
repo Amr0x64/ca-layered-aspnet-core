@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,5 +15,9 @@ namespace Notes.Domain
         public string? Details { get; set; }
         public DateTime CreationDate { get; set; }
         public DateTime? EditDate { get; set; }
+        public Guid SectionId { get; set; }
+
+        [ForeignKey("SectionId")]
+        public Section Section { get; set; }
     }
 }

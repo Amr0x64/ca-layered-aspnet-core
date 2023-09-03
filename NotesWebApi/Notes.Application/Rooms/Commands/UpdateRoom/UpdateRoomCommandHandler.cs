@@ -20,7 +20,7 @@ namespace Notes.Application.Rooms.Commands.UpdateRoom
 
         public async Task<Unit> Handle(UpdateRoomCommand request, CancellationToken cancellationToken)
         {
-            var entity = await _db.Rooms.FirstOrDefaultAsync(room => room.RoomId == request.RoomId, cancellationToken);
+            var entity = await _db.rooms.FirstOrDefaultAsync(room => room.RoomId == request.RoomId, cancellationToken);
 
             if (entity == null || entity.UserId != request.UserId)
             {
