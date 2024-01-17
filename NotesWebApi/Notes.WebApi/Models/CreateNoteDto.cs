@@ -15,14 +15,17 @@ namespace Notes.WebApi.Models
         [Required]
         public string Title { get; set; }
         public string? Details { get; set; }
-
+        
+        public Guid SectionId { get; set; }
         public void Mapping(Profile profile)
         {
             profile.CreateMap<CreateNoteDto, CreateNoteCommand>()
                 .ForMember(noteCommand => noteCommand.Title,
                     opt => opt.MapFrom(noteDto => noteDto.Title))
                 .ForMember(noteCommand => noteCommand.Details,
-                    opt => opt.MapFrom(noteDto => noteDto.Details));
+                    opt => opt.MapFrom(noteDto => noteDto.Details))
+                .ForMember(noteCommand => noteCommand.UserId,
+                    opt => opt.MapFrom(noteDto => noteDto.SectionId));
         }
     }
 }

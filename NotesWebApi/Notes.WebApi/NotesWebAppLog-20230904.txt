@@ -1,0 +1,27 @@
+2023-09-04 19:57:08.836 +03:00 [INF] Executed DbCommand (73ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM pg_class AS cls
+JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+WHERE
+        cls.relkind IN ('r', 'v', 'm', 'f', 'p') AND
+        ns.nspname NOT IN ('pg_catalog', 'information_schema') AND
+        -- Exclude tables which are members of PG extensions
+        NOT EXISTS (
+            SELECT 1 FROM pg_depend WHERE
+                classid=(
+                    SELECT cls.oid
+                    FROM pg_class AS cls
+                             JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+                    WHERE relname='pg_class' AND ns.nspname='pg_catalog'
+                ) AND
+                objid=cls.oid AND
+                deptype IN ('e', 'x')
+        )
+2023-09-04 19:57:09.112 +03:00 [INF] User profile is available. Using 'C:\Users\amir-\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-09-04 19:57:09.330 +03:00 [INF] Now listening on: https://localhost:7124
+2023-09-04 19:57:09.335 +03:00 [INF] Now listening on: http://localhost:5124
+2023-09-04 19:57:09.338 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-04 19:57:09.340 +03:00 [INF] Hosting environment: Development
+2023-09-04 19:57:09.342 +03:00 [INF] Content root path: D:\ca-dotnet\ca-layered-aspnet-core\NotesWebApi\Notes.WebApi\
+2023-09-04 20:43:44.204 +03:00 [INF] Application is shutting down...

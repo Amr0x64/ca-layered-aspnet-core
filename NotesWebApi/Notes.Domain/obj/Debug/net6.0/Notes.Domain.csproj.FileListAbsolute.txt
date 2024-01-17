@@ -44,3 +44,14 @@ D:\Note\NotesWebApi\Notes.Domain\obj\Debug\net6.0\Notes.Domain.dll
 D:\Note\NotesWebApi\Notes.Domain\obj\Debug\net6.0\refint\Notes.Domain.dll
 D:\Note\NotesWebApi\Notes.Domain\obj\Debug\net6.0\Notes.Domain.pdb
 D:\Note\NotesWebApi\Notes.Domain\obj\Debug\net6.0\ref\Notes.Domain.dll
+D:\ca-dotnet\ca-layered-aspnet-core\NotesWebApi\Notes.Domain\bin\Debug\net6.0\Notes.Domain.deps.json
+D:\ca-dotnet\ca-layered-aspnet-core\NotesWebApi\Notes.Domain\bin\Debug\net6.0\Notes.Domain.dll
+D:\ca-dotnet\ca-layered-aspnet-core\NotesWebApi\Notes.Domain\bin\Debug\net6.0\Notes.Domain.pdb
+D:\ca-dotnet\ca-layered-aspnet-core\NotesWebApi\Notes.Domain\obj\Debug\net6.0\Notes.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\ca-dotnet\ca-layered-aspnet-core\NotesWebApi\Notes.Domain\obj\Debug\net6.0\Notes.Domain.AssemblyInfoInputs.cache
+D:\ca-dotnet\ca-layered-aspnet-core\NotesWebApi\Notes.Domain\obj\Debug\net6.0\Notes.Domain.AssemblyInfo.cs
+D:\ca-dotnet\ca-layered-aspnet-core\NotesWebApi\Notes.Domain\obj\Debug\net6.0\Notes.Domain.csproj.CoreCompileInputs.cache
+D:\ca-dotnet\ca-layered-aspnet-core\NotesWebApi\Notes.Domain\obj\Debug\net6.0\Notes.Domain.dll
+D:\ca-dotnet\ca-layered-aspnet-core\NotesWebApi\Notes.Domain\obj\Debug\net6.0\refint\Notes.Domain.dll
+D:\ca-dotnet\ca-layered-aspnet-core\NotesWebApi\Notes.Domain\obj\Debug\net6.0\Notes.Domain.pdb
+D:\ca-dotnet\ca-layered-aspnet-core\NotesWebApi\Notes.Domain\obj\Debug\net6.0\ref\Notes.Domain.dll

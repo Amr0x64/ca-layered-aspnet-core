@@ -14,16 +14,18 @@ namespace Notes.Tests.Common
     {
         public NotesDbContext Context;
         public IMapper Mapper;
-
+        public ICacheService Cache;
+        
         public QueryTestFixture()
         {
             Context = NotesContextFactory.Create();
             var configurationProvider = new MapperConfiguration(cfg =>
             {
-                cfg.AddProfile(new AssemblyMappingProfile(
+                cfg.AddProfile(new AssemblyMappingProfile(  
                     typeof(INotesDbContext).Assembly));
             });
             Mapper = configurationProvider.CreateMapper();
+            Cache = 
         }
 
         public void Dispose()

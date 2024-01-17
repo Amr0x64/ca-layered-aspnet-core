@@ -38,7 +38,8 @@
             Post /note
             {
                 title: "note title",
-                details: "note details"
+                details: "note details",
+                sectionId: "3ac7b5e0-4323-4ae8-9395-15ea05e4bce9"
             }
             </remarks>   
             <param name="createNoteDto">CreateNoteDto object</param>

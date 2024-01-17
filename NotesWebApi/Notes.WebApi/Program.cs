@@ -13,11 +13,13 @@ using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Serilog;
 using Serilog.Events;
 using Notes.WebApi.Services;
+using System.Reflection.Emit;
+using System.Diagnostics.Tracing;
 
 Log.Logger = new LoggerConfiguration()
     .MinimumLevel.Override("Microsoft", LogEventLevel.Information)
     .WriteTo.Console()
-    .WriteTo.File("NotesWebAppLog-.txt", rollingInterval: RollingInterval.Day)
+    .WriteTo.File("NotesWebAppLog-.txt", rollingInterval: RollingInterval.Month)
     .CreateLogger();
 
 var builder = WebApplication.CreateBuilder(args);
@@ -40,7 +42,7 @@ builder.Services.AddAuthentication(config =>
 })
     .AddJwtBearer("Bearer", options =>
     {
-        options.Authority = "https://localhost:7099/"; //Доступ к сервису авторизации
+        options.Authority = "https://localhost:7099/"; //пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         options.Audience = "NotesWebAPI";
         options.RequireHttpsMetadata = false;
     });
@@ -53,6 +55,12 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddApiVersioning();
 builder.Services.AddSingleton<ICurrentUserService, CurrentUserService>();
 builder.Services.AddHttpContextAccessor();
+builder.Services.AddStackExchangeRedisCache(options =>
+{
+    options.Configuration = "localhost:90";
+    options.InstanceName = "notes";
+});
+builder.Services.AddScoped<ICacheService, RedisCacheService>();
 /*builder.Services.AddHostedService<LogAnalysisService>();
 */
 
@@ -64,7 +72,13 @@ builder.Services.AddCors(options =>
         policy.AllowAnyMethod();
         policy.AllowAnyOrigin();
     });
+
+    options.AddPolicy("Test", policy =>
+    {
+        policy.WithOrigins("https://localhost:7192/");
+    });
 });
+
 
 
 var app = builder.Build();
@@ -73,6 +87,8 @@ if (app.Environment.IsDevelopment())
 {
     app.UseDeveloperExceptionPage();
 }
+
+AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
 
 using (var scope = builder.Services.BuildServiceProvider().CreateScope())
 {

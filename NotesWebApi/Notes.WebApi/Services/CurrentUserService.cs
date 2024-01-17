@@ -16,7 +16,7 @@ namespace Notes.WebApi.Services
 
         public Guid UserId 
         {
-            get
+            get 
             {
                 var id = _httpContextAccessor.HttpContext?.User?.FindFirstValue(ClaimTypes.NameIdentifier);
                 return string.IsNullOrEmpty(id) ? Guid.Empty : Guid.Parse(id);

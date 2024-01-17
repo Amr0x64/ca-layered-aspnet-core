@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ryIumeCmQeOpbMCaM4f3ZiRzYr8TkvbRbeuvPR9gApGsStUYK3di1Yq05oFt4pCWuerKef9GVTkBG6WtgskEww==",
+  "dgSpecHash": "yuxye5yXc+QAYo8YevbEBZVlGRowIc1BMqXw361P/3jJUaPWgXbcQc0IGUARLO1pA6SpbnANi2KuZQX+aoeHlg==",
   "success": true,
-  "projectFilePath": "D:\\Note\\NotesWebApi\\Notes.Tests\\Notes.Tests.csproj",
+  "projectFilePath": "D:\\ca-dotnet\\ca-layered-aspnet-core\\NotesWebApi\\Notes.Tests\\Notes.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\amir-\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\amir-\\.nuget\\packages\\coverlet.collector\\3.1.2\\coverlet.collector.3.1.2.nupkg.sha512",
@@ -130,7 +130,10 @@
     "C:\\Users\\amir-\\.nuget\\packages\\xunit.core\\2.4.1\\xunit.core.2.4.1.nupkg.sha512",
     "C:\\Users\\amir-\\.nuget\\packages\\xunit.extensibility.core\\2.4.1\\xunit.extensibility.core.2.4.1.nupkg.sha512",
     "C:\\Users\\amir-\\.nuget\\packages\\xunit.extensibility.execution\\2.4.1\\xunit.extensibility.execution.2.4.1.nupkg.sha512",
-    "C:\\Users\\amir-\\.nuget\\packages\\xunit.runner.visualstudio\\2.4.3\\xunit.runner.visualstudio.2.4.3.nupkg.sha512"
+    "C:\\Users\\amir-\\.nuget\\packages\\xunit.runner.visualstudio\\2.4.3\\xunit.runner.visualstudio.2.4.3.nupkg.sha512",
+    "C:\\Users\\amir-\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.26\\microsoft.netcore.app.ref.6.0.26.nupkg.sha512",
+    "C:\\Users\\amir-\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.26\\microsoft.windowsdesktop.app.ref.6.0.26.nupkg.sha512",
+    "C:\\Users\\amir-\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.26\\microsoft.aspnetcore.app.ref.6.0.26.nupkg.sha512"
   ],
   "logs": []
 }

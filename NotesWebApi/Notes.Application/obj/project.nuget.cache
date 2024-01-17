@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "H79FtYkuFWsnO0UBoxCKe+FKZyEivN5vGc6a9CLdtL4LIEFPRh3hOLUauvT3ZyHhQ9OyKdsDf2TiC0FS7NCMtQ==",
+  "dgSpecHash": "8wNhZcZorH0zr08/NleROxYFDi+PeFbUMwUCH7uBCrKak4PXuoRDawXcvznuzkawpki54ZP2b4EiTOmAubto/Q==",
   "success": true,
-  "projectFilePath": "D:\\Note\\NotesWebApi\\Notes.Application\\Notes.Application.csproj",
+  "projectFilePath": "D:\\ca-dotnet\\ca-layered-aspnet-core\\NotesWebApi\\Notes.Application\\Notes.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\amir-\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\amir-\\.nuget\\packages\\fluentvalidation\\11.4.0\\fluentvalidation.11.4.0.nupkg.sha512",
@@ -35,7 +35,10 @@
     "C:\\Users\\amir-\\.nuget\\packages\\system.text.encoding\\4.0.11\\system.text.encoding.4.0.11.nupkg.sha512",
     "C:\\Users\\amir-\\.nuget\\packages\\system.text.encoding.extensions\\4.0.11\\system.text.encoding.extensions.4.0.11.nupkg.sha512",
     "C:\\Users\\amir-\\.nuget\\packages\\system.threading.tasks\\4.0.11\\system.threading.tasks.4.0.11.nupkg.sha512",
-    "C:\\Users\\amir-\\.nuget\\packages\\system.threading.timer\\4.0.1\\system.threading.timer.4.0.1.nupkg.sha512"
+    "C:\\Users\\amir-\\.nuget\\packages\\system.threading.timer\\4.0.1\\system.threading.timer.4.0.1.nupkg.sha512",
+    "C:\\Users\\amir-\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.26\\microsoft.netcore.app.ref.6.0.26.nupkg.sha512",
+    "C:\\Users\\amir-\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.26\\microsoft.windowsdesktop.app.ref.6.0.26.nupkg.sha512",
+    "C:\\Users\\amir-\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.26\\microsoft.aspnetcore.app.ref.6.0.26.nupkg.sha512"
   ],
   "logs": []
 }

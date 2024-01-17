@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Note\\NotesWebApi\\Notes.Persistence\\Notes.Persistence.csproj": {}
+    "D:\\ca-dotnet\\ca-layered-aspnet-core\\NotesWebApi\\Notes.Persistence\\Notes.Persistence.csproj": {}
   },
   "projects": {
-    "D:\\Note\\NotesWebApi\\Notes.Application\\Notes.Application.csproj": {
+    "D:\\ca-dotnet\\ca-layered-aspnet-core\\NotesWebApi\\Notes.Application\\Notes.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Note\\NotesWebApi\\Notes.Application\\Notes.Application.csproj",
+        "projectUniqueName": "D:\\ca-dotnet\\ca-layered-aspnet-core\\NotesWebApi\\Notes.Application\\Notes.Application.csproj",
         "projectName": "Notes.Application",
-        "projectPath": "D:\\Note\\NotesWebApi\\Notes.Application\\Notes.Application.csproj",
+        "projectPath": "D:\\ca-dotnet\\ca-layered-aspnet-core\\NotesWebApi\\Notes.Application\\Notes.Application.csproj",
         "packagesPath": "C:\\Users\\amir-\\.nuget\\packages\\",
-        "outputPath": "D:\\Note\\NotesWebApi\\Notes.Application\\obj\\",
+        "outputPath": "D:\\ca-dotnet\\ca-layered-aspnet-core\\NotesWebApi\\Notes.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,8 +32,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Note\\NotesWebApi\\Notes.Domain\\Notes.Domain.csproj": {
-                "projectPath": "D:\\Note\\NotesWebApi\\Notes.Domain\\Notes.Domain.csproj"
+              "D:\\ca-dotnet\\ca-layered-aspnet-core\\NotesWebApi\\Notes.Domain\\Notes.Domain.csproj": {
+                "projectPath": "D:\\ca-dotnet\\ca-layered-aspnet-core\\NotesWebApi\\Notes.Domain\\Notes.Domain.csproj"
               }
             }
           }
@@ -92,23 +92,37 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.26, 6.0.26]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.26, 6.0.26]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.26, 6.0.26]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Note\\NotesWebApi\\Notes.Domain\\Notes.Domain.csproj": {
+    "D:\\ca-dotnet\\ca-layered-aspnet-core\\NotesWebApi\\Notes.Domain\\Notes.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Note\\NotesWebApi\\Notes.Domain\\Notes.Domain.csproj",
+        "projectUniqueName": "D:\\ca-dotnet\\ca-layered-aspnet-core\\NotesWebApi\\Notes.Domain\\Notes.Domain.csproj",
         "projectName": "Notes.Domain",
-        "projectPath": "D:\\Note\\NotesWebApi\\Notes.Domain\\Notes.Domain.csproj",
+        "projectPath": "D:\\ca-dotnet\\ca-layered-aspnet-core\\NotesWebApi\\Notes.Domain\\Notes.Domain.csproj",
         "packagesPath": "C:\\Users\\amir-\\.nuget\\packages\\",
-        "outputPath": "D:\\Note\\NotesWebApi\\Notes.Domain\\obj\\",
+        "outputPath": "D:\\ca-dotnet\\ca-layered-aspnet-core\\NotesWebApi\\Notes.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -151,23 +165,37 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.26, 6.0.26]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.26, 6.0.26]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.26, 6.0.26]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Note\\NotesWebApi\\Notes.Persistence\\Notes.Persistence.csproj": {
+    "D:\\ca-dotnet\\ca-layered-aspnet-core\\NotesWebApi\\Notes.Persistence\\Notes.Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Note\\NotesWebApi\\Notes.Persistence\\Notes.Persistence.csproj",
+        "projectUniqueName": "D:\\ca-dotnet\\ca-layered-aspnet-core\\NotesWebApi\\Notes.Persistence\\Notes.Persistence.csproj",
         "projectName": "Notes.Persistence",
-        "projectPath": "D:\\Note\\NotesWebApi\\Notes.Persistence\\Notes.Persistence.csproj",
+        "projectPath": "D:\\ca-dotnet\\ca-layered-aspnet-core\\NotesWebApi\\Notes.Persistence\\Notes.Persistence.csproj",
         "packagesPath": "C:\\Users\\amir-\\.nuget\\packages\\",
-        "outputPath": "D:\\Note\\NotesWebApi\\Notes.Persistence\\obj\\",
+        "outputPath": "D:\\ca-dotnet\\ca-layered-aspnet-core\\NotesWebApi\\Notes.Persistence\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -188,11 +216,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Note\\NotesWebApi\\Notes.Application\\Notes.Application.csproj": {
-                "projectPath": "D:\\Note\\NotesWebApi\\Notes.Application\\Notes.Application.csproj"
+              "D:\\ca-dotnet\\ca-layered-aspnet-core\\NotesWebApi\\Notes.Application\\Notes.Application.csproj": {
+                "projectPath": "D:\\ca-dotnet\\ca-layered-aspnet-core\\NotesWebApi\\Notes.Application\\Notes.Application.csproj"
               },
-              "D:\\Note\\NotesWebApi\\Notes.Domain\\Notes.Domain.csproj": {
-                "projectPath": "D:\\Note\\NotesWebApi\\Notes.Domain\\Notes.Domain.csproj"
+              "D:\\ca-dotnet\\ca-layered-aspnet-core\\NotesWebApi\\Notes.Domain\\Notes.Domain.csproj": {
+                "projectPath": "D:\\ca-dotnet\\ca-layered-aspnet-core\\NotesWebApi\\Notes.Domain\\Notes.Domain.csproj"
               }
             }
           }
@@ -233,12 +261,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.26, 6.0.26]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.26, 6.0.26]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.26, 6.0.26]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

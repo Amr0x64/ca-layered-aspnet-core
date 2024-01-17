@@ -1,0 +1,248 @@
+2024-01-02 00:16:27.988 +03:00 [INF] Executed DbCommand (56ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM pg_class AS cls
+JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+WHERE
+        cls.relkind IN ('r', 'v', 'm', 'f', 'p') AND
+        ns.nspname NOT IN ('pg_catalog', 'information_schema') AND
+        -- Exclude tables which are members of PG extensions
+        NOT EXISTS (
+            SELECT 1 FROM pg_depend WHERE
+                classid=(
+                    SELECT cls.oid
+                    FROM pg_class AS cls
+                             JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+                    WHERE relname='pg_class' AND ns.nspname='pg_catalog'
+                ) AND
+                objid=cls.oid AND
+                deptype IN ('e', 'x')
+        )
+2024-01-02 00:16:28.423 +03:00 [INF] User profile is available. Using 'C:\Users\amir-\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-02 00:16:28.783 +03:00 [INF] Now listening on: https://localhost:7124
+2024-01-02 00:16:28.786 +03:00 [INF] Now listening on: http://localhost:5124
+2024-01-02 00:16:28.792 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-02 00:16:28.794 +03:00 [INF] Hosting environment: Development
+2024-01-02 00:16:28.795 +03:00 [INF] Content root path: D:\ca-dotnet\ca-layered-aspnet-core\NotesWebApi\Notes.WebApi\
+2024-01-02 00:16:55.920 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/index.html - -
+2024-01-02 00:16:56.366 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/index.html - - - 200 - text/html;charset=utf-8 453.4839ms
+2024-01-02 00:16:56.619 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/favicon-32x32.png - -
+2024-01-02 00:16:56.650 +03:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2024-01-02 00:16:56.657 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/favicon-32x32.png - - - 0 628 image/png 37.2883ms
+2024-01-02 00:16:56.720 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/swagger/v1/swagger.json - -
+2024-01-02 00:16:57.016 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 295.5678ms
+2024-01-02 00:18:38.490 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/api/1/Note - -
+2024-01-02 00:18:39.272 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2024-01-02 00:18:39.311 +03:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNoteList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2024-01-02 01:11:56.215 +03:00 [INF] Executed DbCommand (44ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM pg_class AS cls
+JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+WHERE
+        cls.relkind IN ('r', 'v', 'm', 'f', 'p') AND
+        ns.nspname NOT IN ('pg_catalog', 'information_schema') AND
+        -- Exclude tables which are members of PG extensions
+        NOT EXISTS (
+            SELECT 1 FROM pg_depend WHERE
+                classid=(
+                    SELECT cls.oid
+                    FROM pg_class AS cls
+                             JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+                    WHERE relname='pg_class' AND ns.nspname='pg_catalog'
+                ) AND
+                objid=cls.oid AND
+                deptype IN ('e', 'x')
+        )
+2024-01-02 01:11:56.529 +03:00 [INF] User profile is available. Using 'C:\Users\amir-\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-02 01:11:56.702 +03:00 [INF] Now listening on: https://localhost:7124
+2024-01-02 01:11:56.703 +03:00 [INF] Now listening on: http://localhost:5124
+2024-01-02 01:11:56.706 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-02 01:11:56.707 +03:00 [INF] Hosting environment: Development
+2024-01-02 01:11:56.708 +03:00 [INF] Content root path: D:\ca-dotnet\ca-layered-aspnet-core\NotesWebApi\Notes.WebApi\
+2024-01-02 01:32:06.779 +03:00 [INF] Executed DbCommand (59ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM pg_class AS cls
+JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+WHERE
+        cls.relkind IN ('r', 'v', 'm', 'f', 'p') AND
+        ns.nspname NOT IN ('pg_catalog', 'information_schema') AND
+        -- Exclude tables which are members of PG extensions
+        NOT EXISTS (
+            SELECT 1 FROM pg_depend WHERE
+                classid=(
+                    SELECT cls.oid
+                    FROM pg_class AS cls
+                             JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+                    WHERE relname='pg_class' AND ns.nspname='pg_catalog'
+                ) AND
+                objid=cls.oid AND
+                deptype IN ('e', 'x')
+        )
+2024-01-02 01:32:07.166 +03:00 [INF] User profile is available. Using 'C:\Users\amir-\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-02 01:32:07.427 +03:00 [INF] Now listening on: https://localhost:7124
+2024-01-02 01:32:07.429 +03:00 [INF] Now listening on: http://localhost:5124
+2024-01-02 01:32:07.433 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-02 01:32:07.435 +03:00 [INF] Hosting environment: Development
+2024-01-02 01:32:07.436 +03:00 [INF] Content root path: D:\ca-dotnet\ca-layered-aspnet-core\NotesWebApi\Notes.WebApi\
+2024-01-02 01:32:51.332 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/api/1/Note - -
+2024-01-02 01:32:52.091 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2024-01-02 01:32:52.148 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+2024-01-02 01:32:52.154 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+2024-01-02 01:32:52.160 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-01-02 01:32:52.170 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-01-02 01:32:52.183 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/api/1/Note - - - 401 0 - 851.9769ms
+2024-01-02 01:33:00.511 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7124/api/1.0/Note - -
+2024-01-02 01:33:00.511 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7124/api/1.0/Note - -
+2024-01-02 01:33:00.514 +03:00 [INF] CORS policy execution successful.
+2024-01-02 01:33:00.514 +03:00 [INF] CORS policy execution successful.
+2024-01-02 01:33:00.518 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7124/api/1.0/Note - - - 204 - - 6.9461ms
+2024-01-02 01:33:00.518 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7124/api/1.0/Note - - - 204 - - 6.9278ms
+2024-01-02 01:33:00.535 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/api/1.0/Note - -
+2024-01-02 01:33:00.536 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/api/1.0/Note - -
+2024-01-02 01:33:00.537 +03:00 [INF] CORS policy execution successful.
+2024-01-02 01:33:00.538 +03:00 [INF] CORS policy execution successful.
+2024-01-02 01:33:00.541 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2024-01-02 01:33:00.541 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2024-01-02 01:33:00.544 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+2024-01-02 01:33:00.546 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+2024-01-02 01:33:00.548 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+2024-01-02 01:33:00.549 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+2024-01-02 01:33:00.550 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-01-02 01:33:00.551 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-01-02 01:33:00.552 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-01-02 01:33:00.553 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-01-02 01:33:00.558 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/api/1.0/Note - - - 401 0 - 23.0855ms
+2024-01-02 01:33:00.558 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/api/1.0/Note - - - 401 0 - 22.8004ms
+2024-01-02 01:33:14.307 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/index.html - -
+2024-01-02 01:33:14.571 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/index.html - - - 200 - text/html;charset=utf-8 263.9444ms
+2024-01-02 01:33:14.888 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/swagger/v1/swagger.json - -
+2024-01-02 01:33:15.152 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 264.3660ms
+2024-01-02 01:33:46.516 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/api/1/Note - -
+2024-01-02 01:33:46.520 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2024-01-02 01:33:46.526 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+2024-01-02 01:33:46.529 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+2024-01-02 01:33:46.530 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-01-02 01:33:46.531 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-01-02 01:33:46.532 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/api/1/Note - - - 401 0 - 15.8490ms
+2024-01-02 01:33:54.607 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7124/api/1.0/Note - -
+2024-01-02 01:33:54.607 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7124/api/1.0/Note - -
+2024-01-02 01:33:54.608 +03:00 [INF] CORS policy execution successful.
+2024-01-02 01:33:54.608 +03:00 [INF] CORS policy execution successful.
+2024-01-02 01:33:54.609 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7124/api/1.0/Note - - - 204 - - 2.3402ms
+2024-01-02 01:33:54.610 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7124/api/1.0/Note - - - 204 - - 2.6361ms
+2024-01-02 01:33:54.614 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/api/1.0/Note - -
+2024-01-02 01:33:54.615 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/api/1.0/Note - -
+2024-01-02 01:33:54.615 +03:00 [INF] CORS policy execution successful.
+2024-01-02 01:33:54.616 +03:00 [INF] CORS policy execution successful.
+2024-01-02 01:33:54.640 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2024-01-02 01:33:54.640 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2024-01-02 01:33:54.664 +03:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNoteList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2024-01-02 01:33:54.664 +03:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNoteList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2024-01-02 01:36:02.576 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7124/api/1.0/Note - -
+2024-01-02 01:36:02.576 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/api/1/Note - -
+2024-01-02 01:36:02.576 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7124/api/1.0/Note - -
+2024-01-02 01:36:02.576 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7124/api/1.0/Note - -
+2024-01-02 01:36:02.576 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7124/api/1.0/Note - -
+2024-01-02 01:36:02.578 +03:00 [INF] CORS policy execution successful.
+2024-01-02 01:36:02.580 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2024-01-02 01:36:02.580 +03:00 [INF] CORS policy execution successful.
+2024-01-02 01:36:02.583 +03:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNoteList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2024-01-02 01:36:02.584 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7124/api/1.0/Note - - - 0 - - 8.3330ms
+2024-01-02 01:36:02.581 +03:00 [INF] CORS policy execution successful.
+2024-01-02 01:36:02.581 +03:00 [INF] CORS policy execution successful.
+2024-01-02 01:36:22.956 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7124/api/1.0/Note - - - 0 - - 20377.6666ms
+2024-01-02 01:36:37.332 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7124/api/1.0/Note - - - 0 - - 20381.2531ms
+2024-01-02 01:36:02.582 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7124/api/1.0/Note - - - 0 - - 6.6683ms
+2024-01-02 01:37:11.933 +03:00 [INF] Executed DbCommand (71ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM pg_class AS cls
+JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+WHERE
+        cls.relkind IN ('r', 'v', 'm', 'f', 'p') AND
+        ns.nspname NOT IN ('pg_catalog', 'information_schema') AND
+        -- Exclude tables which are members of PG extensions
+        NOT EXISTS (
+            SELECT 1 FROM pg_depend WHERE
+                classid=(
+                    SELECT cls.oid
+                    FROM pg_class AS cls
+                             JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+                    WHERE relname='pg_class' AND ns.nspname='pg_catalog'
+                ) AND
+                objid=cls.oid AND
+                deptype IN ('e', 'x')
+        )
+2024-01-02 01:37:12.135 +03:00 [INF] User profile is available. Using 'C:\Users\amir-\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-02 01:37:12.268 +03:00 [INF] Now listening on: https://localhost:7124
+2024-01-02 01:37:12.270 +03:00 [INF] Now listening on: http://localhost:5124
+2024-01-02 01:37:12.273 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-02 01:37:12.275 +03:00 [INF] Hosting environment: Development
+2024-01-02 01:37:12.276 +03:00 [INF] Content root path: D:\ca-dotnet\ca-layered-aspnet-core\NotesWebApi\Notes.WebApi\
+2024-01-02 01:37:19.371 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/api/1/Note - -
+2024-01-02 01:37:19.910 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2024-01-02 01:37:19.944 +03:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNoteList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2024-01-02 01:37:20.230 +03:00 [INF] Notes Request: GetNoteListQuery "5457eece-211b-4752-974e-1615a7e1a153" {"UserId":"5457eece-211b-4752-974e-1615a7e1a153","$type":"GetNoteListQuery"}
+2024-01-02 01:37:20.304 +03:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi) in 349.687ms
+2024-01-02 01:37:20.309 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2024-01-02 01:37:20.484 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/api/1/Note - - - 500 - application/json 1117.2789ms
+2024-01-02 01:39:49.493 +03:00 [INF] Application is shutting down...
+2024-01-02 01:47:15.013 +03:00 [INF] Executed DbCommand (41ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM pg_class AS cls
+JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+WHERE
+        cls.relkind IN ('r', 'v', 'm', 'f', 'p') AND
+        ns.nspname NOT IN ('pg_catalog', 'information_schema') AND
+        -- Exclude tables which are members of PG extensions
+        NOT EXISTS (
+            SELECT 1 FROM pg_depend WHERE
+                classid=(
+                    SELECT cls.oid
+                    FROM pg_class AS cls
+                             JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+                    WHERE relname='pg_class' AND ns.nspname='pg_catalog'
+                ) AND
+                objid=cls.oid AND
+                deptype IN ('e', 'x')
+        )
+2024-01-02 01:47:15.298 +03:00 [INF] User profile is available. Using 'C:\Users\amir-\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-02 01:47:15.482 +03:00 [INF] Now listening on: https://localhost:7124
+2024-01-02 01:47:15.483 +03:00 [INF] Now listening on: http://localhost:5124
+2024-01-02 01:47:15.485 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-02 01:47:15.486 +03:00 [INF] Hosting environment: Development
+2024-01-02 01:47:15.487 +03:00 [INF] Content root path: D:\ca-dotnet\ca-layered-aspnet-core\NotesWebApi\Notes.WebApi\
+2024-01-02 01:47:50.205 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/api/1/Note - -
+2024-01-02 01:47:50.811 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2024-01-02 01:47:50.836 +03:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNoteList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).

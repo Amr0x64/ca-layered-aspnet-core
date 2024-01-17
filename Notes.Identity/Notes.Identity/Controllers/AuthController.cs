@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Notes.Identity.Models;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -43,16 +44,17 @@ namespace Notes.Identity.Controllers
                 return View(model);
             }
 
-            var user = await _userManager.FindByNameAsync(model.Username);
+            var user = await _userManager.FindByNameAsync(model.Username);  
             if (user == null)
             {
                 ModelState.AddModelError(String.Empty, "Пользователь не найден");
-                return View();
+                return View(model);
             }
             var result = await _signInManager.PasswordSignInAsync(model.Username, model.Password, false, false);
             if (!result.Succeeded)
             {
                 ModelState.AddModelError(String.Empty, "Не верный логин или пароль");
+                Debug.WriteLine("Не верный логин");
                 return View(model);
             }
 

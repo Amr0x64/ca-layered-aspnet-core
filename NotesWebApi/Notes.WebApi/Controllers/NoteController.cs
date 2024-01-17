@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Notes.Application.Notes.Commands.CreateNote;
 using Notes.Application.Notes.Commands.DeleteCommand;
@@ -7,12 +8,6 @@ using Notes.Application.Notes.Commands.UpdateNote;
 using Notes.Application.Notes.Queries.GetNoteDetails;
 using Notes.Application.Notes.Queries.GetNoteList;
 using Notes.WebApi.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography.Xml;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Notes.WebApi.Controllers
 {
@@ -27,7 +22,7 @@ namespace Notes.WebApi.Controllers
         {
             _mapper = mapper;
         }
-
+        
         /// <summary>
         /// Gets the list of notes
         /// </summary>
@@ -48,7 +43,6 @@ namespace Notes.WebApi.Controllers
             {
                 UserId = UserId
             };
-
             var vm = await Mediator.Send(query);
             return Ok(vm);
         }
@@ -88,7 +82,8 @@ namespace Notes.WebApi.Controllers
         /// Post /note
         /// {
         ///     title: "note title",
-        ///     details: "note details"
+        ///     details: "note details",
+        ///     sectionId: "3ac7b5e0-4323-4ae8-9395-15ea05e4bce9"
         /// }
         /// </remarks>   
         /// <param name="createNoteDto">CreateNoteDto object</param>

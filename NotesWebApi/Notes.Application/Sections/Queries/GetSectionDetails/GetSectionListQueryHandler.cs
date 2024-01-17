@@ -11,7 +11,8 @@ namespace Notes.Application.Sections.Queries.GetSectionDetails
             (_db) = (db);
         public async Task<SectionListVm> Handle(GetSectionListQuery request, CancellationToken cancellationToken)
         {
-            var sections = await _db.sections.Include(n => n.Notes).Where(s => s.IsActive && s.RoomId == request.RoomId)
+            var sections = await _db.sections.Include(n => n.Notes)
+                .Where(s => s.IsActive && s.RoomId == request.RoomId)
                 .ToListAsync(cancellationToken);
 
             SectionListVm vm = new SectionListVm() { Sections = sections };

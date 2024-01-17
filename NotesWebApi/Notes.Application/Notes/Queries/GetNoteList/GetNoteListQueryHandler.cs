@@ -15,19 +15,27 @@ namespace Notes.Application.Notes.Queries.GetNoteList
     {
         private readonly INotesDbContext _db;
         private readonly IMapper _mapper;
-
-        public GetNoteListQueryHandler(INotesDbContext db, IMapper mapper)
+        private readonly ICacheService _cache;
+        
+        public GetNoteListQueryHandler(INotesDbContext db, IMapper mapper, ICacheService cache)
         {
             _db = db;
             _mapper = mapper;
+            _cache = cache;
         }
 
         public async Task<NoteListVm> Handle(GetNoteListQuery request, CancellationToken cancellationToken)
-        {
-            var notesQuery = await _db.notes.Where(note => note.UserId.ToString().ToLower() 
-            == request.UserId.ToString().ToLower())
+            {
+            List<NoteLookupDto> notesQuery = await _cache.GetCachedValueAsync<List<NoteLookupDto>>(request.UserId.ToString());
+
+            if (notesQuery is null)
+            {
+                notesQuery = await _db.notes.Where(note => note.UserId.ToString().ToLower() == request.UserId.ToString().ToLower())
                 .ProjectTo<NoteLookupDto>(_mapper.ConfigurationProvider)
                 .ToListAsync(cancellationToken);
+    
+                await _cache.SetCachedValueAsync(request.UserId.ToString(), notesQuery, TimeSpan.FromSeconds(40));
+            }
     
             return new NoteListVm { Notes = notesQuery };
         }

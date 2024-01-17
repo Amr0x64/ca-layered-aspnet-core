@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Notes.Application.Interfaces;
 
 namespace Notes.WebApi.Controllers
 {
@@ -14,11 +15,14 @@ namespace Notes.WebApi.Controllers
     public abstract class BaseController : ControllerBase
     {
         private IMediator _mediator;
+        
         protected IMediator Mediator =>
             _mediator ??= HttpContext.RequestServices.GetService<IMediator>();
-
+            
         internal Guid UserId => User.Identity.IsAuthenticated
-            ? Guid.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value)
+            ? HttpContext.RequestServices.GetService<ICurrentUserService>().UserId
             : Guid.Empty;
+            
+        
     }
 }
