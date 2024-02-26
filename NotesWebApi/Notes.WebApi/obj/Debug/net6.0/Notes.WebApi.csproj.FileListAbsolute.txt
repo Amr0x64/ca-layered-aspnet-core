@@ -509,3 +509,4 @@ D:\ca-dotnet\ca-layered-aspnet-core\NotesWebApi\Notes.WebApi\obj\Debug\net6.0\re
 D:\ca-dotnet\ca-layered-aspnet-core\NotesWebApi\Notes.WebApi\bin\Debug\net6.0\Microsoft.Extensions.Caching.StackExchangeRedis.dll
 D:\ca-dotnet\ca-layered-aspnet-core\NotesWebApi\Notes.WebApi\bin\Debug\net6.0\Pipelines.Sockets.Unofficial.dll
 D:\ca-dotnet\ca-layered-aspnet-core\NotesWebApi\Notes.WebApi\bin\Debug\net6.0\StackExchange.Redis.dll
+D:\ca-dotnet\ca-layered-aspnet-core\NotesWebApi\Notes.WebApi\obj\Debug\net6.0\Notes.WebApi.sourcelink.json

@@ -1,0 +1,45 @@
+2024-02-16 18:20:53.508 +03:00 [INF] Executed DbCommand (146ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM pg_class AS cls
+JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+WHERE
+        cls.relkind IN ('r', 'v', 'm', 'f', 'p') AND
+        ns.nspname NOT IN ('pg_catalog', 'information_schema') AND
+        -- Exclude tables which are members of PG extensions
+        NOT EXISTS (
+            SELECT 1 FROM pg_depend WHERE
+                classid=(
+                    SELECT cls.oid
+                    FROM pg_class AS cls
+                             JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+                    WHERE relname='pg_class' AND ns.nspname='pg_catalog'
+                ) AND
+                objid=cls.oid AND
+                deptype IN ('e', 'x')
+        )
+2024-02-16 18:20:53.982 +03:00 [INF] User profile is available. Using 'C:\Users\amir-\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-02-16 18:20:54.286 +03:00 [INF] Now listening on: https://localhost:7124
+2024-02-16 18:20:54.288 +03:00 [INF] Now listening on: http://localhost:5124
+2024-02-16 18:20:54.294 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-16 18:20:54.297 +03:00 [INF] Hosting environment: Development
+2024-02-16 18:20:54.299 +03:00 [INF] Content root path: D:\ca-dotnet\ca-layered-aspnet-core\NotesWebApi\Notes.WebApi\
+2024-02-16 18:23:03.899 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/ - -
+2024-02-16 18:23:04.149 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/ - - - 301 0 - 272.4759ms
+2024-02-16 18:23:04.196 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/index.html - -
+2024-02-16 18:23:04.780 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/index.html - - - 200 - text/html;charset=utf-8 583.5154ms
+2024-02-16 18:23:04.933 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/swagger-ui.css - -
+2024-02-16 18:23:04.938 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/swagger-ui-bundle.js - -
+2024-02-16 18:23:04.942 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/swagger-ui-standalone-preset.js - -
+2024-02-16 18:23:05.040 +03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2024-02-16 18:23:05.040 +03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2024-02-16 18:23:05.047 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/swagger-ui.css - - - 200 144929 text/css 114.1641ms
+2024-02-16 18:23:05.047 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/swagger-ui-standalone-preset.js - - - 200 312163 application/javascript 105.1285ms
+2024-02-16 18:23:05.049 +03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2024-02-16 18:23:05.052 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/swagger-ui-bundle.js - - - 200 1061536 application/javascript 113.8672ms
+2024-02-16 18:23:05.363 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/favicon-32x32.png - -
+2024-02-16 18:23:05.364 +03:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2024-02-16 18:23:05.366 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/favicon-32x32.png - - - 200 628 image/png 3.5972ms
+2024-02-16 18:23:05.494 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7124/swagger/v1/swagger.json - -
+2024-02-16 18:23:05.740 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7124/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 245.7645ms
+2024-02-16 18:23:53.696 +03:00 [INF] Application is shutting down...
